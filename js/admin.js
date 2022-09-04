@@ -16,8 +16,7 @@ let imagen = document.querySelector("#imagen");
 let categoria = document.querySelector("#categoria");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
-let listaProductos =
-  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+
 const modalFormProducto = new bootstrap.Modal(
   document.querySelector("#modalProducto")
 );
@@ -83,17 +82,22 @@ function generarProducto() {
   console.log(nuevoProducto);
   listaProductos.push(nuevoProducto);
   console.log(listaProductos);
+  guardarDatosEnLS();
+  limpiarFormulario();
 }
 
 function limpiarFormulario() {
   formAdmin.reset();
   let arrayInput = document.getElementsByTagName("input");
-  let selectCategoria = document.querySelector("#Categoria");
+  let selectCategoria = document.querySelector("#categoria");
   selectCategoria.className = "form-control";
   for (let i = 0; i < arrayInput.length; i++) {
     arrayInput[i].className = "form-control";
   }
 }
+
+let listaProductos =
+  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
 function guardarDatosEnLS() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
