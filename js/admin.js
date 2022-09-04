@@ -1,4 +1,5 @@
 import { Producto } from "./classProducto.js";
+import {validarDescripcion, validarNombre, validarStock, validarCategoria, validarImagen, validarPrecio} from "./helpers.js"
 
 let formAdmin = document.querySelector("#formAdmin");
 let codigo = document.querySelector("#codigo");
@@ -16,6 +17,13 @@ const modalFormProducto = new bootstrap.Modal(
 const btnCrearProducto = document.querySelector("#btnCrearProducto");
 let productoNuevo = true;
 
+nombre.addEventListener('blur', ()=>{validarNombre(nombre)})
+descripcion.addEventListener('blur', ()=>{validarDescripcion(descripcion)})
+imagen.addEventListener('blur', ()=>{validarImagen(imagen)})
+categoria.addEventListener('blur', ()=>{validarCategoria(categoria)})
+precio.addEventListener('blur', ()=>{validarPrecio(precio)})
+stock.addEventListener('blur', ()=>{validarStock(stock)})
+
 btnCrearProducto.addEventListener("click", mostrarFormulario);
 
 formAdmin.addEventListener("submit", crearProducto);
@@ -31,7 +39,9 @@ function mostrarFormulario() {
 
 function crearProducto(e) {
   e.preventDefault();
-  generarProducto();
+  if(productoNuevo && validarNombre(nombre) && validarDescripcion(descripcion) && validarImagen(imagen) && validarCategoria(categoria) && validarPrecio(precio) && validarStock(stock)){
+    generarProducto();
+  }
 }
 
 function generarProducto() {
