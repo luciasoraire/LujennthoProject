@@ -1,4 +1,11 @@
-
+.btnAzulOscuro{
+    background-color: #122F37;
+    color: white;
+}
+.btnAzulOscuro:hover{
+    background-color: #122F37;
+    color: white;
+}
 
 .cortarText{
     text-overflow: ellipsis;
