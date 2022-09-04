@@ -77,8 +77,9 @@
             <button
               class="btn btn-dark ms-2"
               type="button"
-              id="btnAgregarProducto"
-              data-bs-toggle="modal" data-bs-target="#modalAdmin"
+              id="btnCrearProducto"
+              
+              
             >
               <i class="bi bi-card-list fs-5 text-white"></i>
             </button>
@@ -93,10 +94,12 @@
             <thead>
               <tr>
                 <th scope="col">Codigo</th>
-                <th scope="col">Producto</th>
+                <th scope="col">Nombre Produc.</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col">Imagen</th>
                 <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
                 <th scope="col">Accion</th>
               </tr>
             </thead>
@@ -117,6 +120,8 @@
                   </p>
                 </td>
                 <td>Remera</td>
+                <td>$5000</td>
+                <td>44</td>
                 <td>
                   <button class="btn btn-outline-light me-1">
                     <i class="bi bi-pencil-square"></i></button
@@ -132,15 +137,15 @@
       <!-- Ventana Modal Formulario -->
       <div
         class="modal fade"
-        id="modalAdmin"
+        id="modalProducto"
         tabindex="-1"
-        aria-labelledby="modalAdminLabel"
+        aria-labelledby="modalProductoLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-dark">
-              <h5 class="modal-title text-white" id="modalAdminLabel">Administrar producto</h5>
+              <h5 class="modal-title text-white" id="modalProductoLabel">Administrar producto</h5>
               <button
                 type="button"
                 class="btn-close bg-white"
@@ -156,17 +161,17 @@
                     type="text"
                     class="form-control"
                     id="codigo"
-                    placeholder="123"
+                    placeholder="123456789"
                     disabled
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="producto" class="form-label">Producto</label>
+                  <label for="nombre" class="form-label">Nombre del producto</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="producto"
-                    placeholder="Ej: Robotech"
+                    id="nombre"
+                    placeholder="Ej: Remera oversize"
                   />
                 </div>
                 <div class="mb-3">
@@ -190,8 +195,8 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="genero" class="form-label">Categoria</label>
-                  <select id="genero" class="form-control">
+                  <label for="categoria" class="form-label">Categoria</label>
+                  <select id="categoria" class="form-control">
                     <option value="">Seleccione una opcion</option>
                     <option value="Remera">Remera</option>
                     <option value="Buzo">Buzo</option>
@@ -199,6 +204,24 @@
                     <option value="Jogging">Jogging</option>
                   </select>
                 </div>
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="precio"
+                      placeholder="Ej: $5000"
+                    />
+                  </div>
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="stock"
+                      placeholder="Ej: 44"
+                    />
+                  </div>
                 <button type="submit" class="btn btn-light">Enviar</button>
               </form>
             </div>
@@ -227,6 +250,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="../js/admin.js" type="module"></script>
   </body>
 </html>
