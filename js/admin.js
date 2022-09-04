@@ -1,5 +1,12 @@
 import { Producto } from "./classProducto.js";
-import {validarDescripcion, validarNombre, validarStock, validarCategoria, validarImagen, validarPrecio} from "./helpers.js"
+import {
+  validarDescripcion,
+  validarNombre,
+  validarStock,
+  validarCategoria,
+  validarImagen,
+  validarPrecio,
+} from "./helpers.js";
 
 let formAdmin = document.querySelector("#formAdmin");
 let codigo = document.querySelector("#codigo");
@@ -17,29 +24,48 @@ const modalFormProducto = new bootstrap.Modal(
 const btnCrearProducto = document.querySelector("#btnCrearProducto");
 let productoNuevo = true;
 
-nombre.addEventListener('blur', ()=>{validarNombre(nombre)})
-descripcion.addEventListener('blur', ()=>{validarDescripcion(descripcion)})
-imagen.addEventListener('blur', ()=>{validarImagen(imagen)})
-categoria.addEventListener('blur', ()=>{validarCategoria(categoria)})
-precio.addEventListener('blur', ()=>{validarPrecio(precio)})
-stock.addEventListener('blur', ()=>{validarStock(stock)})
+nombre.addEventListener("blur", () => {
+  validarNombre(nombre);
+});
+descripcion.addEventListener("blur", () => {
+  validarDescripcion(descripcion);
+});
+imagen.addEventListener("blur", () => {
+  validarImagen(imagen);
+});
+categoria.addEventListener("blur", () => {
+  validarCategoria(categoria);
+});
+precio.addEventListener("blur", () => {
+  validarPrecio(precio);
+});
+stock.addEventListener("blur", () => {
+  validarStock(stock);
+});
 
 btnCrearProducto.addEventListener("click", mostrarFormulario);
 
 formAdmin.addEventListener("submit", crearProducto);
 
-
 function mostrarFormulario() {
   productoNuevo = true;
   // limpiar el formulario
-
+  limpiarFormulario();
   modalFormProducto.show();
   codigo.value = uuidv4();
 }
 
 function crearProducto(e) {
   e.preventDefault();
-  if(productoNuevo && validarNombre(nombre) && validarDescripcion(descripcion) && validarImagen(imagen) && validarCategoria(categoria) && validarPrecio(precio) && validarStock(stock)){
+  if (
+    productoNuevo &&
+    validarNombre(nombre) &&
+    validarDescripcion(descripcion) &&
+    validarImagen(imagen) &&
+    validarCategoria(categoria) &&
+    validarPrecio(precio) &&
+    validarStock(stock)
+  ) {
     generarProducto();
   }
 }
@@ -55,6 +81,20 @@ function generarProducto() {
     stock.value
   );
   console.log(nuevoProducto);
-  listaProductos.push(nuevoProducto)
-  console.log(listaProductos)
+  listaProductos.push(nuevoProducto);
+  console.log(listaProductos);
+}
+
+function limpiarFormulario() {
+  formAdmin.reset();
+  let arrayInput = document.getElementsByTagName("input");
+  let selectCategoria = document.querySelector("#Categoria");
+  selectCategoria.className = "form-control";
+  for (let i = 0; i < arrayInput.length; i++) {
+    arrayInput[i].className = "form-control";
+  }
+}
+
+function guardarDatosEnLS() {
+  localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
 }
