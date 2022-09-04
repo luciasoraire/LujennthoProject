@@ -58,6 +58,8 @@ function crearProducto(e) {
     validarStock(stock)
   ) {
     generarProducto();
+  }else{
+    actualizarProducto()
   }
 }
 
@@ -120,7 +122,7 @@ function hacerFila(producto) {
     <td>${producto.precio}</td>
     <td>${producto.stock}</td>
     <td>
-      <button class="btn btn-outline-light mb-2">
+      <button class="btn btn-outline-light mb-2" onclick="editarProducto('${producto.codigo}')">
         <i class="bi bi-pencil-square"></i></button
       ><button class="btn btn-outline-light" onclick="borrarProducto('${producto.codigo}')">
         <i class="bi bi-trash"></i>
@@ -136,7 +138,6 @@ function mostrarFormulario() {
   modalFormProducto.show();
   codigo.value = uuidv4();
 }
-
 
 function guardarDatosEnLS() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
@@ -173,4 +174,35 @@ function actualizarTabla() {
   let tablaProducto = document.querySelector("#tablaProducto");
   tablaProducto.innerHTML = "";
   cargaInicial();
+}
+
+window.editarProducto = function (codigoProducto) {
+  productoNuevo = false;
+  modalFormProducto.show();
+  let productoBuscado = listaProductos.find(
+    (producto) => producto.codigo === codigoProducto
+  );
+  codigo.value = productoBuscado.codigo;
+  nombre.value = productoBuscado.nombre;
+  descripcion.value = productoBuscado.descripcion;
+  imagen.value = productoBuscado.imagen;
+  categoria.value = productoBuscado.categoria;
+  precio.value = productoBuscado.precio;
+  stock.value = productoBuscado.stock;
+};
+
+function actualizarProducto(){
+    let posicionProducto = listaProductos.findIndex((producto)=>producto.codigo === codigo.value)
+
+    listaProductos[posicionProducto].nombre = nombre.value
+    listaProductos[posicionProducto].descripcion = descripcion.value
+    listaProductos[posicionProducto].imagen = imagen.value
+    listaProductos[posicionProducto].categoria = categoria.value
+    listaProductos[posicionProducto].precio = precio.value
+    listaProductos[posicionProducto].stock = stock.value
+
+    guardarDatosEnLS()
+    actualizarTabla()
+    modalFormProducto.hide()
+    limpiarFormulario()
 }
