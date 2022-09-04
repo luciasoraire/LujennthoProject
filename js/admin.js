@@ -16,12 +16,12 @@ let imagen = document.querySelector("#imagen");
 let categoria = document.querySelector("#categoria");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
+let productoNuevo = true;
 
 const modalFormProducto = new bootstrap.Modal(
   document.querySelector("#modalProducto")
 );
 const btnCrearProducto = document.querySelector("#btnCrearProducto");
-let productoNuevo = true;
 
 nombre.addEventListener("blur", () => {
   validarNombre(nombre);
@@ -84,6 +84,46 @@ function generarProducto() {
   console.log(listaProductos);
   guardarDatosEnLS();
   limpiarFormulario();
+  hacerFila(nuevoProducto)
+  modalFormProducto.hide()
+}
+let listaProductos =
+  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+
+cargaInicial();
+
+function cargaInicial() {
+  if (listaProductos.length > 0) {
+    listaProductos.map((producto) => hacerFila(producto));
+  }
+}
+
+function hacerFila(producto) {
+  let tablaProducto = document.querySelector("#tablaProducto");
+  tablaProducto.innerHTML += `<tr>
+    <th scope="row">${producto.codigo}</th>
+    <td>${producto.nombre}</td>
+    <td>
+      <p class="cortarText">
+        ${producto.descripcion}
+      </p>
+    </td>
+    <td>
+      <p class="cortarText">
+        ${producto.imagen}
+      </p>
+    </td>
+    <td>${producto.categoria}</td>
+    <td>${producto.precio}</td>
+    <td>${producto.stock}</td>
+    <td>
+      <button class="btn btn-outline-light mb-2">
+        <i class="bi bi-pencil-square"></i></button
+      ><button class="btn btn-outline-light">
+        <i class="bi bi-trash"></i></i>
+      </button>
+    </td>
+  </tr>`;
 }
 
 function limpiarFormulario() {
@@ -95,9 +135,6 @@ function limpiarFormulario() {
     arrayInput[i].className = "form-control";
   }
 }
-
-let listaProductos =
-  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
 function guardarDatosEnLS() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
