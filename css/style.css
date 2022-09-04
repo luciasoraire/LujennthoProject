@@ -1,4 +1,30 @@
 
+
+.cortarText{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 350px;
+}
+
 footer{
     background-color: #394D3D;
+}
+
+@media all and (max-width: 575.99px){
+    .cortarText{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 576px) and (max-width: 768px){
+    .cortarText{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 300px;
+    }
 }
