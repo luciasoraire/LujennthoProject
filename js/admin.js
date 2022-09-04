@@ -46,14 +46,6 @@ btnCrearProducto.addEventListener("click", mostrarFormulario);
 
 formAdmin.addEventListener("submit", crearProducto);
 
-function mostrarFormulario() {
-  productoNuevo = true;
-  // limpiar el formulario
-  limpiarFormulario();
-  modalFormProducto.show();
-  codigo.value = uuidv4();
-}
-
 function crearProducto(e) {
   e.preventDefault();
   if (
@@ -84,9 +76,20 @@ function generarProducto() {
   console.log(listaProductos);
   guardarDatosEnLS();
   limpiarFormulario();
-  hacerFila(nuevoProducto)
-  modalFormProducto.hide()
+  hacerFila(nuevoProducto);
+  modalFormProducto.hide();
 }
+
+function limpiarFormulario() {
+  formAdmin.reset();
+  let arrayInput = document.getElementsByTagName("input");
+  let selectCategoria = document.querySelector("#categoria");
+  selectCategoria.className = "form-control";
+  for (let i = 0; i < arrayInput.length; i++) {
+    arrayInput[i].className = "form-control";
+  }
+}
+
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
@@ -119,23 +122,55 @@ function hacerFila(producto) {
     <td>
       <button class="btn btn-outline-light mb-2">
         <i class="bi bi-pencil-square"></i></button
-      ><button class="btn btn-outline-light">
-        <i class="bi bi-trash"></i></i>
+      ><button class="btn btn-outline-light" onclick="borrarProducto('${producto.codigo}')">
+        <i class="bi bi-trash"></i>
       </button>
     </td>
   </tr>`;
 }
 
-function limpiarFormulario() {
-  formAdmin.reset();
-  let arrayInput = document.getElementsByTagName("input");
-  let selectCategoria = document.querySelector("#categoria");
-  selectCategoria.className = "form-control";
-  for (let i = 0; i < arrayInput.length; i++) {
-    arrayInput[i].className = "form-control";
-  }
+function mostrarFormulario() {
+  productoNuevo = true;
+  // limpiar el formulario
+  limpiarFormulario();
+  modalFormProducto.show();
+  codigo.value = uuidv4();
 }
+
 
 function guardarDatosEnLS() {
   localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
+}
+
+window.borrarProducto = function (codigo) {
+  Swal.fire({
+    title: "Eliminar producto",
+    text: "Esta por eliminar el producto seleccionado. ¿Está seguro?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      let copiaListaProductos = listaProductos.filter(
+        (producto) => producto.codigo != codigo
+      );
+      listaProductos = copiaListaProductos;
+      guardarDatosEnLS();
+      actualizarTabla();
+      Swal.fire(
+        "Producto eliminado!",
+        "El producto fue elimando exitosamente",
+        "success"
+      );
+    }
+  });
+};
+
+function actualizarTabla() {
+  let tablaProducto = document.querySelector("#tablaProducto");
+  tablaProducto.innerHTML = "";
+  cargaInicial();
 }
