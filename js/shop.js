@@ -1,5 +1,13 @@
+import { administrador } from "./login.js";
+
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+
+// let listaUsuarios = JSON.parse(localStorage.getItem("listaPeliculasKey")) || [];
+
+// let navAdmin = document.querySelector("#navAdmin");
+// let etiquetaAdmin = `<a href="admin.html" class="nav-link">Administrador</a>`;
+// navAdmin.innerHTML += etiquetaAdmin;
 
 listaProductos.map((producto) => {
   hacerGrilla(producto);

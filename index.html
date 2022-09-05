@@ -30,42 +30,47 @@
       <section id="header">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-dark">
-        
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-target="#navbarSupportedContent"
-                data-toggle="collapse"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle Navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a href="index.html" class="nav-link">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/shop.html" class="nav-link">Shop</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link" id="btnModal">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/admin.html" class="nav-link">Administrador</a>
-                  </li>
-                </ul>
-              </div>
-              <form class="d-flex" role="search">
-                <input class="form-control mr-2" type="search" placeholder="Westlake" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-target="#navbarSupportedContent"
+              data-toggle="collapse"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle Navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a href="index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/shop.html" class="nav-link">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link" id="btnModal">Login</a>
+                </li>
+                <li class="nav-item" id="navAdmin">
+                  
+                </li>
+              </ul>
             </div>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control mr-2"
+                type="search"
+                placeholder="Westlake"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
           </nav>
         </div>
       </section>
@@ -75,21 +80,23 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6"></div>
-            
           </div>
         </div>
       </section>
-      <hr>
+      <hr />
       <div class="contenedorCards">
         <div class="container2">
           <div class="card">
             <div class="imgBx">
-            <img src="img/modelos/remeraKeswickAzul.png" alt="remeraKeswickAzul">
+              <img
+                src="img/modelos/remeraKeswickAzul.png"
+                alt="remeraKeswickAzul"
+              />
             </div>
             <div class="contentBx">
               <h2>Keswick</h2>
               <div class="size">
-                <h3>Size: </h3>
+                <h3>Size:</h3>
                 <span>S</span>
                 <span>M</span>
                 <span>L</span>
@@ -108,12 +115,15 @@
         <div class="container2">
           <div class="card">
             <div class="imgBx">
-            <img src="img/modelos/remeraWestlakeVerde.png" alt="remeraKeswickAzul">
+              <img
+                src="img/modelos/remeraWestlakeVerde.png"
+                alt="remeraKeswickAzul"
+              />
             </div>
             <div class="contentBx">
               <h2>Westlake</h2>
               <div class="size">
-                <h3>Size: </h3>
+                <h3>Size:</h3>
                 <span>S</span>
                 <span>M</span>
                 <span>L</span>
@@ -132,12 +142,15 @@
         <div class="container2">
           <div class="card">
             <div class="imgBx">
-            <img src="img/modelos/remeraMalibuAmarilla.png" alt="remeraKeswickAzul">
+              <img
+                src="img/modelos/remeraMalibuAmarilla.png"
+                alt="remeraKeswickAzul"
+              />
             </div>
             <div class="contentBx">
               <h2>Malibu</h2>
               <div class="size">
-                <h3>Size: </h3>
+                <h3>Size:</h3>
                 <span>S</span>
                 <span>M</span>
                 <span>L</span>
@@ -155,120 +168,62 @@
         </div>
       </div>
 
-      <hr>
+      <hr />
+      <!-- Ventana Modal Login -->
       <div
-      class="modal fade"
-      id="modalLogin"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Administrar Serie
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="formLogin">
-              <div class="mb-3">
-                <label for="codigo">Nombre</label>
-                <input
-                  id="nombre"
-                  type="text"
-                  class="form-control"
-                  maxlength="20"
-                  minlength="1"
-                  
-                />
-              </div>
-              <div class="mb-3">
-                <label for="titulo">Email</label>
-                <input
-                  id="email"
-                  type="text"
-                  class="form-control"
-                  placeholder="usuario@gmail.com"
-                  maxlength="50"
-                  minlength="12"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="descripcion">Contraseña</label>
-                <textarea
-                  id="contraseña"
-                  rows="1"
-                  class="form-control"
-                  placeholder="*******"
-                  maxlength="10"
-                  minlength="2"
-                ></textarea>
+        class="modal fade"
+        id="modalLogin"
+        tabindex="-1"
+        aria-labelledby="modalLogin"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLogin">Iniciar Sesion</h5>
+              <button type="button" class="btn-close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="formLogin">
+                <div class="mb-3">
+                  <label for="nombre">Nombre</label>
+                  <input
+                    id="nombre"
+                    type="text"
+                    class="form-control"
+                    maxlength="20"
+                    minlength="1"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email</label>
+                  <input
+                    id="email"
+                    type="text"
+                    class="form-control"
+                    placeholder="usuario@gmail.com"
+                    maxlength="50"
+                    minlength="12"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña">Contraseña</label>
+                  <input
+                  type="password"
+                    id="contraseña"
+                    class="form-control"
+                    placeholder="*******"
+                    maxlength="16"
+                    minlength="8"
+                  />
+                </div>
                 <button class="btn btn-primary" type="submit">Enviar</button>
-              </div>
-    </main>
-    <!-- <div
-      class="modal fade"
-      id="modalLogin"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Administrar Serie
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+              </form>
+            </div>
           </div>
-          <div class="modal-body">
-            <form id="formLogin">
-              <div class="mb-3">
-                <label for="codigo">Nombre</label>
-                <input
-                  id="codigo"
-                  type="text"
-                  class="form-control"
-                  placeholder="123"
-                  maxlength="5"
-                  minlength="1"
-                  disabled
-                />
-              </div>
-              <div class="mb-3">
-                <label for="titulo">Email</label>
-                <input
-                  id="titulo"
-                  type="text"
-                  class="form-control"
-                  placeholder="Ej: Iron Man"
-                  maxlength="60"
-                  minlength="2"
-                />
-              </div>
-              <div class="mb-3">
-                <label for="descripcion">Contraseña</label>
-                <textarea
-                  id="descripcion"
-                  rows="4"
-                  class="form-control"
-                  placeholder="Ej: Lorem ipsum dolor sit amet."
-                  maxlength="200"
-                  minlength="2"
-                ></textarea>
-              </div> -->
+        </div>
+      </div>
+    </main>
     <footer class="text-center text-white">
       <div class="pt-3 mb-2">
         <a href="pages/error404.html" class="text-white"
@@ -291,13 +246,13 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/app.js" type="module"></script>
+    <script src="js/login.js" type="module"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".box"), {
         max: 25,
-        speed: 400
+        speed: 400,
       });
-      </script>
+    </script>
   </body>
 </html>
