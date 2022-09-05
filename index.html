@@ -54,7 +54,7 @@
                     <a href="#" class="nav-link">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">Login</a>
+                    <a href="#" class="nav-link" id="btnModal">Login</a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/admin.html" class="nav-link">Administrador</a>
@@ -156,7 +156,119 @@
       </div>
 
       <hr>
+      <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Administrar Serie
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formLogin">
+              <div class="mb-3">
+                <label for="codigo">Nombre</label>
+                <input
+                  id="nombre"
+                  type="text"
+                  class="form-control"
+                  placeholder="123"
+                  maxlength="5"
+                  minlength="1"
+                  disabled
+                />
+              </div>
+              <div class="mb-3">
+                <label for="titulo">Email</label>
+                <input
+                  id="email"
+                  type="text"
+                  class="form-control"
+                  placeholder="usuario@gmail.com"
+                  maxlength="50"
+                  minlength="12"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Contraseña</label>
+                <textarea
+                  id="contraseña"
+                  rows="1"
+                  class="form-control"
+                  placeholder="*******"
+                  maxlength="10"
+                  minlength="2"
+                ></textarea>
+              </div>
     </main>
+    <!-- <div
+      class="modal fade"
+      id="modalLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Administrar Serie
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formLogin">
+              <div class="mb-3">
+                <label for="codigo">Nombre</label>
+                <input
+                  id="codigo"
+                  type="text"
+                  class="form-control"
+                  placeholder="123"
+                  maxlength="5"
+                  minlength="1"
+                  disabled
+                />
+              </div>
+              <div class="mb-3">
+                <label for="titulo">Email</label>
+                <input
+                  id="titulo"
+                  type="text"
+                  class="form-control"
+                  placeholder="Ej: Iron Man"
+                  maxlength="60"
+                  minlength="2"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion">Contraseña</label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Ej: Lorem ipsum dolor sit amet."
+                  maxlength="200"
+                  minlength="2"
+                ></textarea>
+              </div> -->
     <footer class="text-center text-white">
       <div class="pt-3 mb-2">
         <a href="pages/error404.html" class="text-white"
@@ -179,7 +291,7 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <script src="js/app.js"></script>
+    <script src="./js/app.js" type="module"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".box"), {
