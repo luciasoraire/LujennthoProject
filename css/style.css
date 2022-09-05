@@ -71,6 +71,213 @@ input.form-control{
    width: 55%;
 }
 
+
+hr{
+    color: #394D3D;
+    
+}
+
+
+.container2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+padding: 2%;
+    
+   
+
+}
+.contenedorCards{
+    position: relative;
+    display: flex;
+  flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container2 .card{
+    position: relative;
+    width: 320px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    
+
+}
+.container2 .card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff8e;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+
+}
+
+.container2 .card:hover:before{
+    clip-path: circle(300px at 80% 10%);
+}
+
+.container2 .card:after{
+    
+    position: absolute;
+    top: 10%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.61);
+
+
+
+}
+
+
+.container2 .card .imgBx{
+    position: absolute;
+    top:45%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container2 .card:hover .imgBx{
+    top: 0%;
+    transform: translate(0%);
+}
+.container2 .card .imgBx img{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+}
+.container2 .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+z-index: 10;
+}
+
+.container2 .card:hover .contentBx{
+    height: 210px;
+}
+
+.container2 .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #394D3D;
+    top: 5%;
+    
+}
+.container2 .card .contentBx .size,
+.container2 .card .contentBx .color
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.container2 .card:hover .contentBx .size{
+opacity: 1;
+visibility: visible;
+transition-delay: 0.5s;
+}
+.container2 .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+    }
+
+.container2 .card .contentBx .size h3,
+.container2 .card .contentBx .color h3{
+    color: #394D3D;
+    font-weight: 300;
+    font-size: 14px;
+    
+    letter-spacing: 2px;
+    margin-right: 10px;
+    
+}
+
+.container2 .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    background: #697E6F;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor:pointer;
+}
+.container2 .card .contentBx .size span:hover{
+    background: #4d6353;
+    color: white;
+
+}
+.container2 .card .contentBx .color span{
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer
+}
+
+.container2 .card .contentBx .color span:nth-child(2){
+    background-color: #CBB577;
+}
+.container2 .card .contentBx .color span:nth-child(3){
+    background-color: #122F37;
+}
+.container2 .card .contentBx .color span:nth-child(4){
+    background-color: #B27835;
+}
+
+.container2 .card .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #697E6F;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+    border-color: #697E6F;
+    border-style:groove;
+}
+
+.container2 .card:hover .contentBx a{
+ 
+    opacity:1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+
+
 /* Cierre index */
 
 .btnAzulOscuro{
@@ -110,3 +317,8 @@ footer{
         width: 200px;
     }
 }
+@media (max-width: 800px) {
+    .contenedorCards {
+      flex-direction: column;
+    }
+  }
