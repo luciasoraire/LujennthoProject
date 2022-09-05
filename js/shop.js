@@ -1,5 +1,3 @@
-import { administrador } from "./login.js";
-
 let listaProductos =
   JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 
