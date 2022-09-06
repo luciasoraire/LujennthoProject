@@ -255,22 +255,37 @@ body{
 }
 div.columns.image{
     text-align: center;
+    
 }
 .proximamente{
     text-align: center;
     color: #394D3D;
+   
+    
 
 }
 .texto{
     color: #394D3D; 
+    
+    
 }
-
+button.btn.btn-warning{
+    background-color: #ffffff;
+    color: #394D3D;
+    border-color: #394D3D;
+    
+    
+}
 .section-container
 {
 --bs-gutter-x: 1.5rem;
 --bs-gutter-y: 0;
 display: flex;
 flex-wrap: wrap;
+text-align: center;
+align-items: center;
+align-content: center;
+justify-content: center;
 }
 .section-container .columns
 {
