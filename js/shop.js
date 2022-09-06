@@ -26,8 +26,12 @@ function hacerGrilla(producto) {
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body text-center">
           <h5 class="card-title mb-3">${producto.nombre}</h5>
-          <a href="#" class="btn btnAzulOscuro">Detalle</a>
+          <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
         </div>
       </div>
 </aside>`;
+}
+
+function detalleProducto(codigo){
+  window.location.href = window.location.origin + '/pages/detalle.html?codigo='+codigo
 }

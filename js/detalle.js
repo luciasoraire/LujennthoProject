@@ -12,3 +12,4 @@ const removerClases = () => {
         panel.classList.remove("active");
     });
 };
+
