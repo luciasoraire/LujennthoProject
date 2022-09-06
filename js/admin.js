@@ -13,6 +13,7 @@ let codigo = document.querySelector("#codigo");
 let nombre = document.querySelector("#nombre");
 let descripcion = document.querySelector("#descripcion");
 let imagen = document.querySelector("#imagen");
+let imagenSecundaria = document.querySelector("#imagenSecundaria");
 let categoria = document.querySelector("#categoria");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
@@ -31,6 +32,9 @@ descripcion.addEventListener("blur", () => {
 });
 imagen.addEventListener("blur", () => {
   validarImagen(imagen);
+});
+imagenSecundaria.addEventListener("blur", () => {
+  validarImagen(imagenSecundaria);
 });
 categoria.addEventListener("blur", () => {
   validarCategoria(categoria);

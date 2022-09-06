@@ -78,8 +78,6 @@
               class="btn btn-dark ms-2"
               type="button"
               id="btnCrearProducto"
-              
-              
             >
               <i class="bi bi-card-list fs-5 text-white"></i>
             </button>
@@ -103,9 +101,7 @@
                 <th scope="col">Accion</th>
               </tr>
             </thead>
-            <tbody id="tablaProducto" class="table-group-divider">
-              
-            </tbody>
+            <tbody id="tablaProducto" class="table-group-divider"></tbody>
           </table>
         </article>
       </section>
@@ -120,7 +116,9 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-dark">
-              <h5 class="modal-title text-white" id="modalProductoLabel">Administrar producto</h5>
+              <h5 class="modal-title text-white" id="modalProductoLabel">
+                Administrar producto
+              </h5>
               <button
                 type="button"
                 class="btn-close bg-white"
@@ -141,7 +139,9 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre del producto</label>
+                  <label for="nombre" class="form-label"
+                    >Nombre del producto</label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -166,7 +166,18 @@
                     type="text"
                     class="form-control"
                     id="imagen"
-                    placeholder="Ej: http://127.0.0.1:5500/pages/administrador.html"
+                    placeholder="Ej: https://i.ibb.co/Yj1bF0W/remera-Bridgemere.png"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="imagenSecundaria" class="form-label"
+                    >Imagen secundaria opcinal</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="imagenSecundaria"
+                    placeholder="Ej: https://i.ibb.co/Yj1bF0W/remera-Bridgemere.png"
                   />
                 </div>
                 <div class="mb-3">
@@ -175,28 +186,26 @@
                     <option value="">Seleccione una opcion</option>
                     <option value="Remera">Remera</option>
                     <option value="Buzo">Buzo</option>
-                    <option value="Campera">Campera</option>
-                    <option value="Jogging">Jogging</option>
                   </select>
                 </div>
                 <div class="mb-3">
-                    <label for="precio" class="form-label">Precio</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="precio"
-                      placeholder="Ej: $5000"
-                    />
-                  </div>
+                  <label for="precio" class="form-label">Precio</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="precio"
+                    placeholder="Ej: $5000"
+                  />
+                </div>
                 <div class="mb-3">
-                    <label for="stock" class="form-label">Stock</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="stock"
-                      placeholder="Ej: 44"
-                    />
-                  </div>
+                  <label for="stock" class="form-label">Stock</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="stock"
+                    placeholder="Ej: 44"
+                  />
+                </div>
                 <button type="submit" class="btn btn-light">Enviar</button>
               </form>
             </div>
