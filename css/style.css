@@ -12,7 +12,8 @@
 }
 
 .navbar {
-  padding: 50px 0;
+  padding: 10px 0 ;
+  background-color: #2735296b;
 }
 
 .navbar-brand {
@@ -28,9 +29,10 @@
   padding-left: 50px;
 }
 .nav-link {
-  color: #ccc !important;
+  color: #ffffff !important;
   letter-spacing: 2px;
   font-size: 1em;
+  font-weight: 400;
 }
 .nav-link:hover {
   background-color: #dcdde1 !important;
@@ -264,11 +266,14 @@ div.columns.image{
     
 
 }
+
 .texto{
     color: #394D3D; 
     
     
 }
+
+
 button.btn.btn-warning{
     background-color: #ffffff;
     color: #394D3D;
