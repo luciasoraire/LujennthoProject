@@ -7,6 +7,7 @@ import {
   validarImagen,
   validarPrecio,
 } from "./helpers.js";
+
 let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
 
 for (let i = 0; i < listaUsuarios.length; i++) {
@@ -70,6 +71,7 @@ function crearProducto(e) {
     validarNombre(nombre) &&
     validarDescripcion(descripcion) &&
     validarImagen(imagen) &&
+    validarImagen(imagenSecundaria) &&
     validarCategoria(categoria) &&
     validarPrecio(precio) &&
     validarStock(stock)
@@ -86,6 +88,7 @@ function generarProducto() {
     nombre.value,
     descripcion.value,
     imagen.value,
+    imagenSecundaria.value,
     categoria.value,
     precio.value,
     stock.value
@@ -133,6 +136,11 @@ function hacerFila(producto) {
     <td>
       <p class="cortarText">
         ${producto.imagen}
+      </p>
+    </td>
+    <td>
+      <p class="cortarText">
+        ${producto.imagenSecundaria}
       </p>
     </td>
     <td>${producto.categoria}</td>
@@ -203,6 +211,7 @@ window.editarProducto = function (codigoProducto) {
   nombre.value = productoBuscado.nombre;
   descripcion.value = productoBuscado.descripcion;
   imagen.value = productoBuscado.imagen;
+  imagenSecundaria.value = productoBuscado.imagenSecundaria;
   categoria.value = productoBuscado.categoria;
   precio.value = productoBuscado.precio;
   stock.value = productoBuscado.stock;
@@ -210,10 +219,10 @@ window.editarProducto = function (codigoProducto) {
 
 function actualizarProducto(){
     let posicionProducto = listaProductos.findIndex((producto)=>producto.codigo === codigo.value)
-
     listaProductos[posicionProducto].nombre = nombre.value
     listaProductos[posicionProducto].descripcion = descripcion.value
     listaProductos[posicionProducto].imagen = imagen.value
+    listaProductos[posicionProducto].imagenSecundaria = imagenSecundaria.value
     listaProductos[posicionProducto].categoria = categoria.value
     listaProductos[posicionProducto].precio = precio.value
     listaProductos[posicionProducto].stock = stock.value
