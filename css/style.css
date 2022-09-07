@@ -373,10 +373,41 @@ footer {
 
 .container3 {
   display: flex;
-  width: 90vw;
+  width: 100vw;
+ 
+}
+
+#panel2{
+    background-image: url(https://i.ibb.co/myWb2SM/remera-Keswick.png);
+    height: 25vw;
+}
+#panel3{
+    background-image: url(https://i.ibb.co/jRg9f2b/buzo-Bathgate-Verde.png);
+    height: 25vw;
+}
+#panel4{
+    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    height: 25vw;
+}
+#panel5{
+    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    height: 25vw;
+}
+#panel6{
+    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    height: 25vw;
+}
+#panel7{
+    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    height: 25vw;
+}
+#panel{
+    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    height: 25vw;
 }
 
 .panel {
+
   background-size: auto 110%;
   background-position: center;
   background-repeat: no-repeat;
