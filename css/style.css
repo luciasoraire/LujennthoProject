@@ -7,26 +7,35 @@
 
 #header {
   position: absolute;
+  position: fixed;
   z-index: 10;
   width: 100%;
+
 }
+
+
+
 
 .navbar {
   padding: 10px 0 ;
-  background-color: #2735296b;
+  background-color: #273529;
+
 }
+
 
 .navbar-brand {
   font-weight: bold;
   font-size: 1.5em;
 
   color: #ccc ;
+  
 }
 
 .nav-item {
   font-weight: 200;
 
   padding-left: 50px;
+  
 }
 .nav-link {
   color: #ffffff ;
