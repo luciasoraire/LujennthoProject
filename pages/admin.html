@@ -29,7 +29,15 @@
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">Lujennthó</a>
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../img/logoAuxiliarBlanco-01.png"
+              width="60"
+              height="60"
+              class="d-inline-block align-top"
+              alt=""
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,22 +52,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a href="../index.html" class="nav-link">Inicio</a>
+                <a
+                  href="../index.html"
+                  class="nav-link"
+                  >Inicio</a
+                >
               </li>
               <li class="nav-item">
-                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="shop.html" aria-current="page" class="nav-link active text-white">Shop</a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">About us</a>
               </li>
-              <li class="nav-item">
-                <button class="nav-link btn" id="btnModal">Login</button>
-              </li>
-              <li
-                class="nav-item active text-white"
-                aria-current="page"
-                id="navAdmin"
-              ></li>
+              <li class="nav-item" id="navAdmin"></li>
             </ul>
           </div>
         </div>
@@ -200,17 +205,19 @@
         </div>
       </div>
     </main>
-    <footer class="text-center text-white">
+    <footer class="text-center text-dark">
       <div class="pt-3 mb-2">
-        <a href="error404.html" class="text-white"
-          ><i class="bi bi-instagram"></i
-        ></a>
-        <a href="error404.html" class="text-white"
-          ><i class="bi bi-twitter mx-2"></i
-        ></a>
-        <a href="error404.html" class="text-white"
-          ><i class="bi bi-facebook"></i
-        ></a>
+        <div class="middle">
+          <a class="btn1" href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="btn1" href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="btn1" href="https://github.com/TomasBudeguer/EcommerceGrupo2">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
       </div>
       <div class="pb-2">
         <p>www.lujenntho.com <br />&copy;Todos los derechos reservados</p>
@@ -222,6 +229,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cae5aa21ab.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/admin.js" type="module"></script>
   </body>
 </html>

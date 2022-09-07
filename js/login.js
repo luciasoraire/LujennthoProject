@@ -92,5 +92,7 @@ for (let i = 0; i < listaUsuarios.length; i++) {
     let navAdmin = document.querySelector("#navAdmin");
     let etiquetaAdmin = `<a href="pages/admin.html" class="nav-link">Administrador</a>`;
     navAdmin.innerHTML = etiquetaAdmin;
+    let navLogin = document.querySelector('#navLogin')
+    navLogin.className = 'ocultar'
   }
 }

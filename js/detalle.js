@@ -1,30 +1,44 @@
 const panels = document.querySelectorAll(".panel");
 
-panels.forEach((panel)=> {
-    panel.addEventListener("click", ()=> {
-        removerClases();
-        panel.classList.add("active");
-    });
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
+    removerClases();
+    panel.classList.add("active");
+  });
 });
 
 const removerClases = () => {
-    panels.forEach((panel) => {
-        panel.classList.remove("active");
-    });
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
 };
+let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
+for (let i = 0; i < listaUsuarios.length; i++) {
+  if (
+    listaUsuarios[i].nombre === "Administrador" &&
+    listaUsuarios[i].contrasenia === "Lujenntho1" &&
+    listaUsuarios[i].email === "administrador@lujenntho.com"
+  ) {
+    let navAdmin = document.querySelector("#navAdmin");
+    let etiquetaAdmin = `<a href="admin.html" class="nav-link">Administrador</a>`;
+    navAdmin.innerHTML = etiquetaAdmin;
+  }
+}
 
 // obtener el parametro de la url
-console.log(window.location.search)
+console.log(window.location.search);
 
 const parametroCodigo = new URLSearchParams(window.location.search);
-console.log(parametroCodigo.get('codigo'))
+console.log(parametroCodigo.get("codigo"));
 
-let listaProductos = JSON.parse(localStorage.getItem('listaProductosKey')) || []
-let productoBuscado = listaProductos.find((producto)=> producto.codigo === parametroCodigo.get('codigo'))
-
+let listaProductos =
+  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+let productoBuscado = listaProductos.find(
+  (producto) => producto.codigo === parametroCodigo.get("codigo")
+);
 
 // dibujar la card
-let detalle = document.querySelector('#descripcion')
+let detalle = document.querySelector("#descripcion");
 detalle.innerHTML = `<div class=" mb-4 text-center">
 <div class="row g-4 mx-4">
   <div class="col-md-4">
@@ -64,4 +78,4 @@ detalle.innerHTML = `<div class=" mb-4 text-center">
     </div>
   </div>
 </div>
-</div>`
+</div>`;
