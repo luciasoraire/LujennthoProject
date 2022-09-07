@@ -50,15 +50,15 @@
   transition: all 0.6s ease 0s;
 }
 
-.main {
+
+.videoFondo{
+  width: 100%;
+  margin-top: 90px;
   position: relative;
-  background: url(../img/fondoIndex.png);
-  min-height: 100vh;
   background-size: cover;
   background-position: center;
-  padding: 280px 0 220px;
-}
 
+}
 button.btn.btn-outline-success {
   color: #ccc;
   border-color: #ccc;
@@ -351,7 +351,7 @@ text-align:justify;
 }
 
 footer {
-  background-color: #394d3d;
+  background-color: #273529;
 }
 
 /* css pagina de detalles */
@@ -378,11 +378,11 @@ footer {
 }
 
 #panel2{
-    background-image: url(https://i.ibb.co/myWb2SM/remera-Keswick.png);
+    background-image: url(https://i.ibb.co/Yj1bF0W/remera-Bridgemere.png);
     height: 25vw;
 }
 #panel3{
-    background-image: url(https://i.ibb.co/jRg9f2b/buzo-Bathgate-Verde.png);
+    background-image: url(https://i.ibb.co/myWb2SM/remera-Keswick.png);
     height: 25vw;
 }
 #panel4{
@@ -390,25 +390,25 @@ footer {
     height: 25vw;
 }
 #panel5{
-    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    background-image: url(https://i.ibb.co/8X55TFh/remera-Malibu.png);
     height: 25vw;
 }
 #panel6{
-    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    background-image: url(https://i.ibb.co/djyBGFj/buzo-Robbie-Ocre.png);
     height: 25vw;
 }
 #panel7{
-    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    background-image: url(https://i.ibb.co/L8Fjz03/buzo-Chicago-Amarillo.png);
     height: 25vw;
 }
 #panel{
-    background-image: url(https://i.ibb.co/74NKsNr/remera-Westlake.png);
+    background-image: url(https://i.ibb.co/jRg9f2b/buzo-Bathgate-Verde.png);
     height: 25vw;
 }
 
 .panel {
 
-  background-size: auto 110%;
+  background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
@@ -419,7 +419,7 @@ footer {
   margin: 10px;
   position: relative;
   transition: flex 0.7s ease-in;
-  -webkit-transition: all 700ms ease-in;
+  -webkit-transition: all 800ms ease-in;
 }
 
 .panel h3 {
@@ -436,6 +436,7 @@ footer {
 }
 .pb-2{
     color: #f1f1f1;
+    background-color: #273529;
 }
 .middle {
   position: relative;
@@ -444,6 +445,7 @@ footer {
   width: 100%;
   text-align: center;
   margin-top: 2%;
+  
 }
 
 .btn1 {
@@ -484,6 +486,51 @@ footer {
   animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
+}
+
+/* botones talles */
+button {
+    
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    color: #f1f1f1;
+    background-color: #394d3d;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.15s linear;
+   }
+   
+   button:hover {
+    background-color: rgb(255, 253, 253);
+    border-color: #394d3d;
+    color: #394d3d;
+    transform: translateY(-5px) scale(1.05);
+   }
+   
+   button:active {
+    background-color: transparent;
+    border-color: #394d3d;
+    color: #394d3d;
+    transform: translateY(5px) scale(0.95);
+   }
+   
+   button:disabled {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #8E8E93;
+    border-color: #8E8E93;
+   }
+.descripcion1{
+    color: #273529;
+    text-align: start;
+}
+
+
+.genero{
+    background-color: #273529;
 }
 
 @keyframes aaa {
@@ -528,11 +575,22 @@ footer {
     width: 200px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .contenedorCards {
     flex-direction: column;
   }
 }
+@media (max-width: 900px){
+  .videoFondo{
+    width: 100%;
+    margin-top: 85px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  
+  }
+}
+
 @media screen and (max-width:767px)
 {
 .section-container
