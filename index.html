@@ -21,11 +21,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-  />
     <link rel="stylesheet" href="css/style.css" />
     <title>Lujennthó</title>
   </head>
@@ -33,24 +28,24 @@
     <header>
       <section id="header">
         <div>
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              
-              <div class="container">
-                <ul class="navbar-nav ml-auto d-flex justify-content-center">
-                  <li class="nav-item active">
-                    <a href="index.html" class="nav-link">Inicio</a>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">Lujennthó</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link active text-white" aria-current="page">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/shop.html" class="nav-link">Shop</a>
@@ -59,15 +54,12 @@
                     <a href="#" class="nav-link">About us</a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link" id="btnModal">Login</a>
+                    <button class="nav-link btn" type="button" id="btnModal">Login</button>
                   </li>
-                  <li class="nav-item" id="navAdmin">
-                    
-                  </li>
+                  <li class="nav-item" id="navAdmin"></li>
                 </ul>
               </div>
             </div>
-            
           </nav>
         </div>
       </section>
@@ -80,32 +72,52 @@
           </div>
         </div>
       </section>
-      <hr >
+      <hr />
       <div class="section-container">
         <div class="columns image">
-           <video src="img/production ID_4066396.mp4" width="90%" autoplay loop></video>
+          <video
+            src="img/production ID_4066396.mp4"
+            width="90%"
+            autoplay
+            loop
+          ></video>
         </div>
         <div class="columns content">
-           <div class="content-container">
-              <h5 class="proximamente">Próximamente</h5>
-              <p class="texto">
-                 En el mes de Septiembre ingresará un nuevo modelo de remera, su nombre es Moscú y es una prenda que no puede faltar en tu placard. ¿Por qué? Porque además de ser calidad Premium, muy fachera, oversize y con mangas 3/4 podemos colocarle el logo de Lujennthó en el formato que más te guste, ¿a qué nos referimos con eso?, que podes elegir entre el logo principal y auxiliar con el nombre completo de la marca o únicamente sus iniciales.
-              </p>
-              <p class="texto">
-                 Esperá, eso no es todo, además de personalizar tu remera Moscú con el logo que más te guste podes elegir también entre la distinta variedad de tonos de la paleta de la marca así como también su tamaño y ubicación; adelante, atrás, al costado, centrado, en las mangas o abajo del cuello. 
-              </p>
-              <p class="texto">
-                La remera es edición limitada y solo la podes adquirir hasta el mes de Noviembre, el modelo no vuelve a ingresar. Te recomendamos activar las notificaciones para que seas el primero en enterarte sobre el ingreso de la remera. 
-             </p>
-             <p class="texto">
-              Una vez actualizada la página con la remera Moscú podrás elegir entre los talles S, M, L, XL y XXL así como también seleccionar las distintas opciones nombradas anteriormente para la personalización de tu remera.
-           </p>
-              
-           </div>
+          <div class="content-container">
+            <h5 class="proximamente">Próximamente</h5>
+            <p class="texto">
+              En el mes de Septiembre ingresará un nuevo modelo de remera, su
+              nombre es Moscú y es una prenda que no puede faltar en tu placard.
+              ¿Por qué? Porque además de ser calidad Premium, muy fachera,
+              oversize y con mangas 3/4 podemos colocarle el logo de Lujennthó
+              en el formato que más te guste, ¿a qué nos referimos con eso?, que
+              podes elegir entre el logo principal y auxiliar con el nombre
+              completo de la marca o únicamente sus iniciales.
+            </p>
+            <p class="texto">
+              Esperá, eso no es todo, además de personalizar tu remera Moscú con
+              el logo que más te guste podes elegir también entre la distinta
+              variedad de tonos de la paleta de la marca así como también su
+              tamaño y ubicación; adelante, atrás, al costado, centrado, en las
+              mangas o abajo del cuello.
+            </p>
+            <p class="texto">
+              La remera es edición limitada y solo la podes adquirir hasta el
+              mes de Noviembre, el modelo no vuelve a ingresar. Te recomendamos
+              activar las notificaciones para que seas el primero en enterarte
+              sobre el ingreso de la remera.
+            </p>
+            <p class="texto">
+              Una vez actualizada la página con la remera Moscú podrás elegir
+              entre los talles S, M, L, XL y XXL así como también seleccionar
+              las distintas opciones nombradas anteriormente para la
+              personalización de tu remera.
+            </p>
+          </div>
         </div>
-     </div>
-    
-      <hr>
+      </div>
+
+      <hr />
       <div class="contenedorCards">
         <div class="container2">
           <div class="card">
@@ -191,10 +203,7 @@
         <div class="container2">
           <div class="card">
             <div class="imgBx">
-              <img
-                src="img/modelos/remeraTyrwhitt.png"
-                alt="remeraTyrwhitt"
-              />
+              <img src="img/modelos/remeraTyrwhitt.png" alt="remeraTyrwhitt" />
             </div>
             <div class="contentBx">
               <h2>Tyrwhitt</h2>
@@ -219,63 +228,70 @@
 
       <hr />
       <div class="section-container">
-        
         <div class="columns content">
-           <div class="content-container">
-              <h5 class="proximamente">Nos renovamos</h5>
-              <p class="texto">
-                 Lujennthó inició como un emprendimiento de cuatro jóvenes tucumanos en el año 2019. 
-              </p>
-              <p class="texto">
-                En búsqueda de un proveedor se interiorizaron sobre la alta contaminación ambiental que produce la industria textil, por ello decidieron incorporar a la marca moda sustentable. ¿Cómo? Utilizando bambú 100% orgánico en el tejido y tintes amigables con el medio ambiente para la estampa de los logos. 
-             </p>
-              <p class="texto">
-                 Además de fabricar prendas ecológicas y agregar packaging biodegradable y compostable, en el mes de Agosto incorporaron nuevas etiquetas caracterizadas por estar hechas a partir de materiales reciclados (algodón, papel y fibras textiles) y por contener semillas en su composición para que luego de su uso puedan plantarse.
-              </p>
-              <p class="texto">
-                Con las etiquetas plantables estarás dando una segunda vida al papel y evitando la generación de residuos. Plantar la etiqueta es muy sencillo y te lleva poco tiempo, solamente tienes que humedecerla en un recipiente con agua durante 30 minutos, colocar el papel húmedo de forma horizontal en una maceta con tierra y expuesta al sol y regarla todos los días.
-             </p>
-             <button type="button" class="btn btn-warning">Conocé más sobre nosotros</button>
-           </div>
+          <div class="content-container">
+            <h5 class="proximamente">Nos renovamos</h5>
+            <p class="texto">
+              Lujennthó inició como un emprendimiento de cuatro jóvenes
+              tucumanos en el año 2019.
+            </p>
+            <p class="texto">
+              En búsqueda de un proveedor se interiorizaron sobre la alta
+              contaminación ambiental que produce la industria textil, por ello
+              decidieron incorporar a la marca moda sustentable. ¿Cómo?
+              Utilizando bambú 100% orgánico en el tejido y tintes amigables con
+              el medio ambiente para la estampa de los logos.
+            </p>
+            <p class="texto">
+              Además de fabricar prendas ecológicas y agregar packaging
+              biodegradable y compostable, en el mes de Agosto incorporaron
+              nuevas etiquetas caracterizadas por estar hechas a partir de
+              materiales reciclados (algodón, papel y fibras textiles) y por
+              contener semillas en su composición para que luego de su uso
+              puedan plantarse.
+            </p>
+            <p class="texto">
+              Con las etiquetas plantables estarás dando una segunda vida al
+              papel y evitando la generación de residuos. Plantar la etiqueta es
+              muy sencillo y te lleva poco tiempo, solamente tienes que
+              humedecerla en un recipiente con agua durante 30 minutos, colocar
+              el papel húmedo de forma horizontal en una maceta con tierra y
+              expuesta al sol y regarla todos los días.
+            </p>
+            <button type="button" class="btn btn-warning">
+              Conocé más sobre nosotros
+            </button>
+          </div>
         </div>
         <div class="columns image">
-          <img src="img/etiquetaLujenntho.png" alt="etiqueta" width="80%">
-       </div>
-     </div>
-     <br>
-     <hr>
-     <div class="section-container">
-      <div class="columns image">
-        <img src="img/local.png" alt="local" width="80%">
-     </div>
-      <div class="columns content">
-         <div class="content-container">
-            
+          <img src="img/etiquetaLujenntho.png" alt="etiqueta" width="80%" />
+        </div>
+      </div>
+      <br />
+      <hr />
+      <div class="section-container">
+        <div class="columns image">
+          <img src="img/local.png" alt="local" width="80%" />
+        </div>
+        <div class="columns content">
+          <div class="content-container">
             <p class="texto">
-               Inauguramos el nuevo local en Vera 859, Capital Federal, Buenos Aires.
+              Inauguramos el nuevo local en Vera 859, Capital Federal, Buenos
+              Aires.
             </p>
-            <br>
-            <p class="texto" >
-              También podes encontrarnos en:
-           </p>
-            <p class="texto">
-                25 de Mayo 464, San Miguel de Tucumán, Tucumán.
-            </p>
+            <br />
+            <p class="texto">También podes encontrarnos en:</p>
+            <p class="texto">25 de Mayo 464, San Miguel de Tucumán, Tucumán.</p>
             <p class="texto">
               Av. Alicia Moreau de Justo 390, Puerto Madero, Buenos Aires.
-           </p>
-           <p class="texto">
-            Av. Colón 608, Ciudad de Córdoba, Córdoba.
-         </p>
-          
-         </div>
+            </p>
+            <p class="texto">Av. Colón 608, Ciudad de Córdoba, Córdoba.</p>
+          </div>
+        </div>
       </div>
-      
 
-   </div>
-   
-      <br>
-      <hr>
+      <br />
+      <hr />
       <!-- Ventana Modal Login -->
       <div
         class="modal fade"
@@ -316,7 +332,7 @@
                 <div class="mb-3">
                   <label for="contraseña">Contraseña</label>
                   <input
-                  type="password"
+                    type="password"
                     id="contraseña"
                     class="form-control"
                     placeholder="*******"
@@ -332,20 +348,20 @@
       </div>
     </main>
 
-    <footer class="text-center text-dark ">
+    <footer class="text-center text-dark">
       <div class="pt-3 mb-2">
         <div class="middle">
-            <a class="btn1" href="#">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a class="btn1" href="#">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a class="btn1" href="#">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            
+          <a class="btn1" href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a class="btn1" href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a class="btn1" href="#">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
+      </div>
       <div class="pb-2">
         <p>www.lujenntho.com <br />&copy;Todos los derechos reservados</p>
       </div>
@@ -365,6 +381,10 @@
       });
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/cae5aa21ab.js" crossorigin="anonymous"></script>    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/cae5aa21ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/style.css" />
   </body>
 </html>
