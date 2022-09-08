@@ -1,67 +1,86 @@
 const panels = document.querySelectorAll(".panel");
 
-panels.forEach((panel)=> {
-    panel.addEventListener("click", ()=> {
-        removerClases();
-        panel.classList.add("active");
-    });
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
+    removerClases();
+    panel.classList.add("active");
+  });
 });
 
 const removerClases = () => {
-    panels.forEach((panel) => {
-        panel.classList.remove("active");
-    });
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+  });
 };
-
-// obtener el parametro de la url
-console.log(window.location.search)
+let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
+for (let i = 0; i < listaUsuarios.length; i++) {
+  if (
+    listaUsuarios[i].nombre === "Administrador" &&
+    listaUsuarios[i].contrasenia === "Lujenntho1" &&
+    listaUsuarios[i].email === "administrador@lujenntho.com"
+  ) {
+    let navAdmin = document.querySelector("#navAdmin");
+    let etiquetaAdmin = `<a href="admin.html" class="nav-link">Administrador</a>`;
+    navAdmin.innerHTML = etiquetaAdmin;
+  }
+}
 
 const parametroCodigo = new URLSearchParams(window.location.search);
-console.log(parametroCodigo.get('codigo'))
 
-let listaProductos = JSON.parse(localStorage.getItem('listaProductosKey')) || []
-let productoBuscado = listaProductos.find((producto)=> producto.codigo === parametroCodigo.get('codigo'))
-
+let listaProductos =
+  JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+let productoBuscado = listaProductos.find(
+  (producto) => producto.codigo === parametroCodigo.get("codigo")
+);
 
 // dibujar la card
-let detalle = document.querySelector('#descripcion')
+let detalle = document.querySelector("#descripcion");
 detalle.innerHTML = `<div class=" mb-4 text-center">
 <div class="row g-4 mx-4">
-  <div class="col-md-4">
+  <div class="col-md-5">
     <img
       src="${productoBuscado.imagen}"
       class="img-fluid rounded-start"
       alt="${productoBuscado.nombre}"
     />
   </div>
-  <div class="col-md-8">
+  <div class="col-md-7">
     <div>
-      <h5></h5>
-      <p></p>
-      <p>
-        Genero:
+      <h2>${productoBuscado.nombre}</h2>
+      <hr>
+      <div>
+        Categoria:
         <span class="badge rounded-pill genero text-light"
-          >${productoBuscado.genero}</span
+          >${productoBuscado.categoria}</span
         >
-      </p>
+      </div>
       <hr>
-      <p>
-        Material:
+      <div>
+       <p>Descripcion:</p>
         <p>${productoBuscado.descripcion}</p>
-      </p>
+      </div>
       <hr>
+      <div>
+<h5>Precio: <span class="badge rounded-pill genero text-light"
+>${productoBuscado.precio}</span
+></h5>
+<h5>Stock: <span class="badge rounded-pill genero text-light"
+>${productoBuscado.stock}</span
+></h5>
+<hr>
+</div>
       <p class="card-text">
         Talle:
       </p>
-      <p>
+      <div>
       <button type="button" class="uiverse">S</button>
       <button type="button" class="uiverse">L</button>
       <button type="button" class="uiverse">XL</button>
-    </p>
-      <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </p>
     </div>
+    <hr>
+    <div>
+        <button>COMPRAR</button>
+      </div>
   </div>
 </div>
-</div>`
+</div>`;

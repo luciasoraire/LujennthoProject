@@ -147,7 +147,7 @@ function hacerFila(producto) {
 
 function mostrarFormulario() {
   productoNuevo = true;
-  // limpiar el formulario
+
   limpiarFormulario();
   modalFormProducto.show();
   codigo.value = uuidv4();

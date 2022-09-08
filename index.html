@@ -22,6 +22,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logoAuxiliarVerdeOscuro.png" type="image/x-icon">
     <title>Lujennthó</title>
   </head>
   <body>
@@ -30,9 +31,14 @@
         <div>
           <nav class="navbar navbar-expand-lg">
             <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="img/logoAuxiliarBlanco-01.png" width="60" height="60" class="d-inline-block align-top" alt="">
-               
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="img/logoAuxiliarBlanco-01.png"
+                  width="60"
+                  height="60"
+                  class="d-inline-block align-top"
+                  alt=""
+                />
               </a>
               <button
                 class="navbar-toggler"
@@ -61,27 +67,26 @@
                   <li class="nav-item">
                     <a href="#" class="nav-link">About us</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" id="navLogin">
                     <button class="nav-link btn" type="button" id="btnModal">
                       Login
                     </button>
                   </li>
                   <li class="nav-item" id="navAdmin"></li>
                 </ul>
-                
               </div>
-              
             </div>
-            
           </nav>
-          
         </div>
       </section>
-      
     </header>
     <main>
- 
-      <video src="img/Fondo/pexels-cottonbro-7026828.mp4" autoplay loop class="videoFondo"></video>
+      <video
+        src="img/Fondo/pexels-cottonbro-7026828.mp4"
+        autoplay
+        loop
+        class="videoFondo"
+      ></video>
       <section class="main">
         <div class="container">
           <div class="row">
@@ -247,7 +252,7 @@
       <div class="section-container">
         <div class="columns content">
           <div class="content-container">
-            <h5 class="proximamente">Nos renovamos</h5>
+            <h5 class="proximamente">Lujennthó ecológico</h5>
             <p class="texto">
               Lujennthó inició como un emprendimiento de cuatro jóvenes
               tucumanos en el año 2019.
@@ -309,7 +314,7 @@
 
       <br />
       <hr />
-      <!-- Ventana Modal Login -->
+
       <div
         class="modal fade"
         id="modalLogin"
@@ -321,7 +326,12 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="modalLogin">Iniciar Sesion</h5>
-              <button type="button" class="btn-close"></button>
+              <button
+                type="button"
+                class="btn-close bg-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-body">
               <form id="formLogin">
@@ -374,7 +384,7 @@
           <a class="btn1" href="#">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a class="btn1" href="#">
+          <a class="btn1" href="https://github.com/TomasBudeguer/EcommerceGrupo2">
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
@@ -393,7 +403,7 @@
     <script src="js/vanilla-tilt.min.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".container2"), {
-        max: 25,  
+        max: 25,
         speed: 400,
       });
     </script>
@@ -402,6 +412,5 @@
       src="https://kit.fontawesome.com/cae5aa21ab.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/style.css" />
   </body>
 </html>

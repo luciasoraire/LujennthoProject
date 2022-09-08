@@ -1,4 +1,4 @@
-// funcionalidad login
+
 import {
   validarNombre,
   validarContrasenia,
@@ -58,10 +58,7 @@ function crearUsuario(e) {
       nuevoUsuario.contrasenia === userAdmin.contrasenia &&
       nuevoUsuario.email === userAdmin.email
     ) {
-      // listaUsuarios.push(`Nombre:${nombre.value}`)
-      // listaUsuarios.push(`email:${email.value}`)
-      // listaUsuarios.push(`Contraseña:${contrasenia.value}`)
-      // console.log(listaUsuarios)
+
       crearLinkAdmin();
       modalFormLogin.hide()
     }else{
@@ -92,5 +89,7 @@ for (let i = 0; i < listaUsuarios.length; i++) {
     let navAdmin = document.querySelector("#navAdmin");
     let etiquetaAdmin = `<a href="pages/admin.html" class="nav-link">Administrador</a>`;
     navAdmin.innerHTML = etiquetaAdmin;
+    let navLogin = document.querySelector('#navLogin')
+    navLogin.className = 'ocultar'
   }
 }
