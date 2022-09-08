@@ -76,9 +76,21 @@
         <hr />
         <div>
           <div class="filtroBoton">
-            <!-- filtrado -->
+            <form id="formFiltro">
+              <div class="mb-3">
+                <label for="filtro" class="form-label">Busque su producto</label>
+                <input type="text" class="form-control" id="filtro">
+              </div>
+              <button
+                type="submit"
+                id="btnFiltrar"
+              >
+                Filtrar
+              </button>
+            </form>
           </div>
-          <!-- div -->
+          <div id="resultado" class="row">
+          </div>
           <hr>
         </div>
         <article class="row" id="grilla"></article>
