@@ -10,7 +10,7 @@ export class Producto {
   }
 }
 
-// validaciones del login
+
 
 export function validarNombre(input){
   if (input.value.trim().length >=3 && input.value.trim().length <=50){
