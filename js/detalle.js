@@ -33,13 +33,13 @@ let productoBuscado = listaProductos.find(
   (producto) => producto.codigo === parametroCodigo.get("codigo")
 );
 
-// dibujar la card
+
 let detalle = document.querySelector("#descripcion");
 detalle.innerHTML = `<div class=" mb-4 text-center">
 <div class="row g-4 mx-4">
   <div class="col-md-5">
     <img
-      src="${productoBuscado.imagen}"
+      src="${productoBuscado.imagenSecundaria}"
       class="img-fluid rounded-start"
       alt="${productoBuscado.nombre}"
     />
@@ -84,3 +84,4 @@ detalle.innerHTML = `<div class=" mb-4 text-center">
   </div>
 </div>
 </div>`;
+

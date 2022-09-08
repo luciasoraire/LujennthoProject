@@ -27,6 +27,7 @@ let codigo = document.querySelector("#codigo");
 let nombre = document.querySelector("#nombre");
 let descripcion = document.querySelector("#descripcion");
 let imagen = document.querySelector("#imagen");
+let imagenSecundaria = document.querySelector("#imagenSecundaria");
 let categoria = document.querySelector("#categoria");
 let precio = document.querySelector("#precio");
 let stock = document.querySelector("#stock");
@@ -45,6 +46,9 @@ descripcion.addEventListener("blur", () => {
 });
 imagen.addEventListener("blur", () => {
   validarImagen(imagen);
+});
+imagenSecundaria.addEventListener("blur", () => {
+  validarImagen(imagenSecundaria);
 });
 categoria.addEventListener("blur", () => {
   validarCategoria(categoria);
@@ -67,6 +71,7 @@ function crearProducto(e) {
     validarNombre(nombre) &&
     validarDescripcion(descripcion) &&
     validarImagen(imagen) &&
+    validarImagen(imagenSecundaria) &&
     validarCategoria(categoria) &&
     validarPrecio(precio) &&
     validarStock(stock)
@@ -83,6 +88,7 @@ function generarProducto() {
     nombre.value,
     descripcion.value,
     imagen.value,
+    imagenSecundaria.value,
     categoria.value,
     precio.value,
     stock.value
@@ -132,6 +138,11 @@ function hacerFila(producto) {
         ${producto.imagen}
       </p>
     </td>
+    <td>
+    <p class="cortarText">
+      ${producto.imagenSecundaria}
+    </p>
+  </td>
     <td>${producto.categoria}</td>
     <td>${producto.precio}</td>
     <td>${producto.stock}</td>
@@ -200,6 +211,7 @@ window.editarProducto = function (codigoProducto) {
   nombre.value = productoBuscado.nombre;
   descripcion.value = productoBuscado.descripcion;
   imagen.value = productoBuscado.imagen;
+  imagenSecundaria.value = productoBuscado.imagenSecundaria;
   categoria.value = productoBuscado.categoria;
   precio.value = productoBuscado.precio;
   stock.value = productoBuscado.stock;
@@ -210,6 +222,7 @@ function actualizarProducto(){
     listaProductos[posicionProducto].nombre = nombre.value
     listaProductos[posicionProducto].descripcion = descripcion.value
     listaProductos[posicionProducto].imagen = imagen.value
+    listaProductos[posicionProducto].imagenSecundaria = imagenSecundaria.value
     listaProductos[posicionProducto].categoria = categoria.value
     listaProductos[posicionProducto].precio = precio.value
     listaProductos[posicionProducto].stock = stock.value

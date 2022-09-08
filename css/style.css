@@ -341,14 +341,24 @@ text-align:justify;
 
 
 .btnAzulOscuro {
-  background-color: #122f37;
+  background-color: #394D3D;
   color: white;
 }
 .btnAzulOscuro:hover {
-  background-color: #122f37;
+  background-color: #697e6f;
   color: white;
 }
 
+h2.text-center.mt-2{
+  padding: 20px;
+  font-size: 40px;
+}
+.filtroBoton{
+  text-align: center;
+}
+div#botonOcultar.text-center{
+  margin-top: 10px;
+}
 .cortarText {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -359,9 +369,28 @@ text-align:justify;
 footer {
   background-color: #273529;
 }
+div.agregarProducto{
+  text-align: right;
+}
+button#btnCrearProducto.btn.btn-dark.ms-2{
+  background-color: #394D3D;
+}
 
-
-
+h2.text-center{
+  padding: 20px;
+  color: #394D3D;
+}
+thead.thead{
+  color: #cbb577;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+ 
+}
+th{
+  background-color: #4d6353;
+}
 * {
   box-sizing: border-box;
 }
@@ -380,12 +409,17 @@ footer {
 .container3 {
   display: flex;
   width: 100vw;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-image: url(../img/fondoIndex.png);
  
 }
 
 #panel2{
     background-image: url(https://i.ibb.co/Yj1bF0W/remera-Bridgemere.png);
     height: 25vw;
+ 
 }
 #panel3{
     background-image: url(https://i.ibb.co/myWb2SM/remera-Keswick.png);
@@ -412,13 +446,14 @@ footer {
     height: 25vw;
 }
 
+
 .panel {
 
-  background-size: auto 100%;
+  background-size: auto 90%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
+  height: 100vh;
+
   color: #fff;
   cursor: pointer;
   flex: 0.5;
@@ -531,7 +566,11 @@ button {
    }
 .descripcion1{
     color: #273529;
-    text-align: start;
+    text-align: center;
+    font-size: 40px;
+
+    
+
 }
 
 
@@ -539,6 +578,12 @@ button {
     background-color: #273529;
 }
 
+img.card-img-top{
+  margin-top: 10px;
+}
+h5.card-title.mb-3{
+  margin-top: 10px;
+}
 @keyframes aaa {
   0% {
     left: -110%;
