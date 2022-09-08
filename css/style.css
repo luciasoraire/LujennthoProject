@@ -337,7 +337,12 @@ margin-bottom:15px;
 text-align:justify;
 }
 
-
+.avatar{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit:cover;
+}
 
 
 .btnAzulOscuro {
@@ -683,3 +688,4 @@ margin-bottom:5px;
     left: -10%;
   }
 }
+
