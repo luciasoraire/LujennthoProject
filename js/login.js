@@ -1,4 +1,3 @@
-
 import {
   validarNombre,
   validarContrasenia,
@@ -51,18 +50,17 @@ function crearUsuario(e) {
       contrasenia.value
     );
     console.log(nuevoUsuario);
-    listaUsuarios.push(nuevoUsuario)
-    guardarDatosEnLS()
+    listaUsuarios.push(nuevoUsuario);
+    guardarDatosEnLS();
     if (
       nuevoUsuario.nombre === userAdmin.nombre &&
       nuevoUsuario.contrasenia === userAdmin.contrasenia &&
       nuevoUsuario.email === userAdmin.email
     ) {
-
       crearLinkAdmin();
-      modalFormLogin.hide()
-    }else{
-        modalFormLogin.hide()
+      modalFormLogin.hide();
+    } else {
+      modalFormLogin.hide();
     }
   }
 }
@@ -71,6 +69,8 @@ function crearLinkAdmin() {
   let navAdmin = document.querySelector("#navAdmin");
   let etiquetaAdmin = `<a href="pages/admin.html" class="nav-link">Administrador</a>`;
   navAdmin.innerHTML += etiquetaAdmin;
+  let navLogin = document.querySelector("#navLogin");
+  navLogin.className = "ocultar";
 }
 
 function limpiarModal() {
@@ -89,7 +89,7 @@ for (let i = 0; i < listaUsuarios.length; i++) {
     let navAdmin = document.querySelector("#navAdmin");
     let etiquetaAdmin = `<a href="pages/admin.html" class="nav-link">Administrador</a>`;
     navAdmin.innerHTML = etiquetaAdmin;
-    let navLogin = document.querySelector('#navLogin')
-    navLogin.className = 'ocultar'
+    let navLogin = document.querySelector("#navLogin");
+    navLogin.className = "ocultar";
   }
 }
