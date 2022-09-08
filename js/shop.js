@@ -47,7 +47,23 @@ function filtrar(e){
   listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || []
   resultado.innerHTML = ''
   let valorInput = filtro.value.toLowerCase()
-
+  for(let producto of listaProductos){
+    let nombre = producto.nombre.toLowerCase()
+    if(nombre.indexOf(valorInput) !== -1){
+      resultado.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3">
+      <div class="text-center">
+          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-3">${producto.nombre}</h5>
+            <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+          </div>
+        </div>
+  </aside>`
+    }
+  }
+  if(resultado.innerHTML === ''){
+    resultado.innerHTML += `<li>Producto no encontrado...</li>`
+  }
 }
 
 
