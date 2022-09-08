@@ -55,7 +55,7 @@ detalle.innerHTML = `<div class=" mb-4 text-center">
       <p>
         Genero:
         <span class="badge rounded-pill genero text-light"
-          >${productoBuscado.genero}</span
+          >${productoBuscado.categoria}</span
         >
       </p>
       <hr>
