@@ -32,4 +32,22 @@ function hacerGrilla(producto) {
 </aside>`;
 }
 
+function detalleProducto(codigo) {
+  window.location.href =
+    window.location.origin + "/pages/detalle.html?codigo=" + codigo;
+}
+
+let formFiltro = document.querySelector("#formFiltro");
+let filtro = document.querySelector("#filtro");
+const resultado = document.querySelector('#resultado')
+formFiltro.addEventListener('submit', filtrar)
+
+function filtrar(e){
+  e.preventDefault()
+  listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || []
+  resultado.innerHTML = ''
+  let valorInput = filtro.value.toLowerCase()
+
+}
+
 
