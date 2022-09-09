@@ -578,10 +578,22 @@ button {
 
 }
 
-
+section.section-container{
+ margin-left: 20px;
+ margin-right: 20px;
+  padding-top: 20px;
+  }
+div.columns.content{
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+p.texto2{
+  padding-bottom: 30px;
+}
 .genero{
     background-color: #273529;
 }
+
 
 img.card-img-top{
   margin-top: 10px;
