@@ -1,9 +1,5 @@
 #  Lujennthó | e-Commerce de Ropa
 
-<hr>
-
-
-
 
 <br>
 
