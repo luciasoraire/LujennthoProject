@@ -84,18 +84,18 @@
         <h2 class="text-center">Lista de productos</h2>
         <hr />
         <article class="table-responsive">
-          <table class="table table-dark table-striped">
+          <table class="table table-dark">
             <thead class="thead">
               <tr>
-                <th scope="col">Codigo</th>
-                <th scope="col">Nombre Produc.</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Imagen secundaria</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Accion</th>
+                <th class ="th" scope="col">Codigo</th>
+                <th class ="th" scope="col">Nombre</th>
+                <th class ="th" scope="col">Descripción</th>
+                <th class ="th" scope="col">Imagen</th>
+                <th class ="th" scope="col">Imagen secundaria</th>
+                <th class ="th" scope="col">Categoria</th>
+                <th class ="th" scope="col">Precio</th>
+                <th class ="th" scope="col">Stock</th>
+                <th class ="th" scope="col">Accion</th>
               </tr>
             </thead>
             <tbody id="tablaProducto" class="table-group-divider"></tbody>
@@ -112,8 +112,8 @@
       >
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header bg-dark">
-              <h5 class="modal-title text-white" id="modalProductoLabel">
+            <div class="modal-header">
+              <h5 class="modal-title text-dark" id="modalProductoLabel">
                 Administrar producto
               </h5>
               <button
@@ -123,8 +123,8 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body bg-dark">
-              <form id="formAdmin" class="text-white">
+            <div class="modal-body">
+              <form id="formAdmin" class="text-dark">
                 <div class="mb-3">
                   <label for="codigo" class="form-label">Codigo</label>
                   <input

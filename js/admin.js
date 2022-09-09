@@ -126,27 +126,27 @@ function cargaInicial() {
 function hacerFila(producto) {
   let tablaProducto = document.querySelector("#tablaProducto");
   tablaProducto.innerHTML += `<tr>
-    <th scope="row">${producto.codigo}</th>
-    <td>${producto.nombre}</td>
-    <td>
+    <th class="productosTabla" scope="row">${producto.codigo}</th>
+    <td class="productosTabla">${producto.nombre}</td>
+    <td class="productosTabla">
       <p class="cortarText">
         ${producto.descripcion}
       </p>
     </td>
-    <td>
+    <td class="productosTabla">
       <p class="cortarText">
         ${producto.imagen}
       </p>
     </td>
-    <td>
+    <td class="productosTabla">
     <p class="cortarText">
       ${producto.imagenSecundaria}
     </p>
   </td>
-    <td>${producto.categoria}</td>
-    <td>${producto.precio}</td>
-    <td>${producto.stock}</td>
-    <td>
+    <td class="productosTabla">${producto.categoria}</td>
+    <td class="productosTabla">${producto.precio}</td>
+    <td class="productosTabla">${producto.stock}</td>
+    <td class="productosTabla">
       <button class="btn btn-outline-light mb-2" onclick="editarProducto('${producto.codigo}')">
         <i class="bi bi-pencil-square"></i></button
       ><button class="btn btn-outline-light" onclick="borrarProducto('${producto.codigo}')">

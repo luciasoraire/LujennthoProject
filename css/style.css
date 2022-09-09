@@ -386,16 +386,26 @@ h2.text-center{
   color: #394D3D;
 }
 thead.thead{
-  color: #cbb577;
+  color: #ffffff;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  align-content: center;
  
+
 }
-th{
-  background-color: #4d6353;
+
+
+th.th{
+  background-color: #394d3d;
 }
+td.productosTabla{
+  background-color: #ffffff;
+  color: #394D3D;
+}
+th.productosTabla{
+  background-color: #ffffff;
+  color: #394D3D;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -593,6 +603,7 @@ p.texto2{
 .genero{
     background-color: #273529;
 }
+
 
 
 img.card-img-top{
