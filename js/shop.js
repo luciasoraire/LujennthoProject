@@ -109,7 +109,11 @@ function hacerCarrito(producto) {
   let comprar = document.querySelector("#comprar");
   comprar.innerHTML = `<button>Comprar</button>`;
 }
-
+function actualizarArticleCarrito() {
+  let articleCarrito = document.querySelector("#articleCarrito");
+  articleCarrito.innerHTML = "";
+  cargaInicial();
+}
 
 
 
