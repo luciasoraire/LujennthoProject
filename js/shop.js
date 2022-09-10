@@ -114,6 +114,13 @@ function actualizarArticleCarrito() {
   articleCarrito.innerHTML = "";
   cargaInicial();
 }
-
+window.borrarProdCarrito = function (codigo) {
+  let copiaListaCarrito = listaCarrito.filter(
+    (producto) => producto.codigo != codigo
+  );
+  listaCarrito = copiaListaCarrito;
+  guardarDatosCarritoEnLS();
+  actualizarArticleCarrito();
+};
 
 
