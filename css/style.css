@@ -208,22 +208,30 @@ i.bi.bi-recycle{
 }
 
 .container2 .card .contentBx .size span {
-  width: 26px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 6px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: #394d3d;
+  background-color: #f1f1f1;
+  font-size:10px;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
   display: inline-block;
-  background: #697e6f;
-  margin: 0 5px;
+margin-right: 3px;
+margin-bottom: 6px;
+
+  text-decoration: none;
+  transform: translateY(0px);
   transition: 0.5s;
-  color: rgb(255, 255, 255);
-  border-radius: 4px;
-  cursor: pointer;
 }
 .container2 .card .contentBx .size span:hover {
-  background: #4d6353;
-  color: white;
+  background-color: #394d3d;
+
+  color: #ffffff;
+  transform: translateY(-2px) scale(1.05);
 }
 .container2 .card .contentBx .color span {
   width: 20px;
@@ -244,21 +252,7 @@ i.bi.bi-recycle{
   background-color: #b27835;
 }
 
-.container2 .card .contentBx a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #fff;
-  border-radius: 4px;
-  margin-top: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #697e6f;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s;
-  border-color: #697e6f;
-  border-style: groove;
-}
+
 
 .container2 .card:hover .contentBx a {
   opacity: 1;
@@ -553,19 +547,21 @@ button {
     padding: 5px 20px;
     border-radius: 16px;
     border: 1px solid transparent;
-    color: #f1f1f1;
-    background-color: #394d3d;
+    color: #394d3d;
+    background-color: #f1f1f1;
     font-size: 16px;
     letter-spacing: 1px;
     transition: all 0.15s linear;
    }
    
    button:hover {
-    background-color: rgb(255, 253, 253);
+    background-color: #394d3d;
     border-color: #394d3d;
-    color: #394d3d;
+    color: #ffffff;
     transform: translateY(-5px) scale(1.05);
+    
    }
+
    
    button:active {
     background-color: transparent;
@@ -611,6 +607,150 @@ img.card-img-top{
 }
 h5.card-title.mb-3{
   margin-top: 10px;
+}
+button.comprarButtonIndex{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: #394d3d;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  transform: translateY(8px);
+  transition: 0.5s;
+
+}
+
+  button.comprarButtonIndex:hover{
+    background-color: #394d3d;
+
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.05);
+
+}
+
+
+
+button.item-button.addToCart.comprarButton{
+  margin-left: 14px;
+}
+button.item-button.addToCart{
+  margin-left: 4px;
+}
+div.card-body.text-centerCarro{
+display: flex;
+}
+div.text-center-carro{
+  display: flex;
+
+}
+.shoppingCartItemPrice {
+  
+ 
+  align-items: center;
+  margin-left: 495px;
+  margin-top: 60px;
+  font-size: 20px;
+}
+
+li.noEncontrado{
+  list-style-type: none;
+  text-align: center;
+  margin-top: 10px;
+}
+h5.card-title-carro{
+  margin-top: 40px;
+  margin-left: 50px;
+}
+aside.col-sm-12.col-md-4.col-lg-3-carro{
+  padding-bottom: 30px;
+}
+h6.productoCarro{
+  text-align: center;
+}
+/* ? SHOPPING CART */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.card-img-top-carro {
+  max-width: 80px;
+  
+  border-radius: 20px;
+}
+
+div.shopping-cart-quantity-input {
+  
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  
+  
+}
+div.toast.ml-auto.fade.show{
+background-color: #ffffff;
+text-align: center;
+
+
+}
+div.toast{
+text-align: center;
+
+
+}
+p.mr-auto{
+color: #394d3d;
+font-size: 15px;
+padding-top: 13px;
+}
+
+input.shopping-cart-quantity-input{
+  margin-bottom: 9px;
+}
+
+p.mb-0.carro{
+  margin-right: 10px;
+}
+button.btn.btn-success.ml-auto.comprarButton{
+  margin-left: 10px;
+  background-color: #394d3d;
+}
+
+
+
+div.shopping-cart-quantity {
+  
+  
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  padding: 5px;
+  margin-left: 190px;
+  margin-top: 40px;
+
+}
+
+button.btn.btn-danger.buttonDelete{
+  margin-bottom: 5px;
+  margin-left: 3px;
+  background-color: #394d3d;
+  border-color: #394D3D;
+}
+.shopping-cart-total {
+  min-height: 96px;
+}
+.containerCarrito{
+  padding: 50px;
 }
 @keyframes aaa {
   0% {

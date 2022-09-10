@@ -23,10 +23,13 @@ function hacerGrilla(producto) {
   let grilla = document.querySelector("#grilla");
   grilla.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3">
     <div class="text-center">
+    
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body text-center">
           <h5 class="card-title mb-3">${producto.nombre}</h5>
-          <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+          <h3 class="item-precio">$${producto.precio}</h3>
+          <button class="item-button addToCart" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+          <button class="item-button addToCart">Añadir al carrito</button>
         </div>
       </div>
 </aside>`;
@@ -55,6 +58,7 @@ function filtrar(e){
           <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
           <div class="card-body text-center">
             <h5 class="card-title mb-3">${producto.nombre}</h5>
+
             <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
           </div>
         </div>
@@ -62,7 +66,7 @@ function filtrar(e){
     }
   }
   if(resultado.innerHTML === ''){
-    resultado.innerHTML += `<li>Producto no encontrado...</li>`
+    resultado.innerHTML += `<li class="noEncontrado">Producto no encontrado</li>`
   }
 }
 
