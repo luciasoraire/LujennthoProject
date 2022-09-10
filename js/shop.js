@@ -112,6 +112,10 @@ function hacerCarrito(producto) {
 function actualizarArticleCarrito() {
   let articleCarrito = document.querySelector("#articleCarrito");
   articleCarrito.innerHTML = "";
+  let tituloCarrito = document.querySelector("#tituloCarrito");
+  tituloCarrito.innerHTML = ""
+  let comprar = document.querySelector("#comprar");
+  comprar.innerHTML = ""
   cargaInicial();
 }
 window.borrarProdCarrito = function (codigo) {
