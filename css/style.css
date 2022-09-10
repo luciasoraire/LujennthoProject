@@ -783,7 +783,7 @@ button.btn.btn-outline-light{
   top: 30px;
   margin: auto;
   width: 450px;
-  margin-bottom: 580px;
+  margin-bottom: 450px;
   background: #273529;
   position: relative;
   border-radius: 50px;
@@ -973,6 +973,42 @@ margin-bottom:5px;
   100% {
     top: -10%;
     left: -10%;
+  }
+}
+
+@media (max-width: 414px){
+  .preloader:before{
+    content: "";
+    position: absolute;
+    background: #b27835;
+    width: 40px;
+    height: 50px;
+    animation: preloader 3s infinite;
+    border-radius: 60px;
+  }
+}
+@media (max-width: 414px){
+  .preloader{
+    top: 30px;
+    margin: auto;
+    width: 350px;
+    margin-bottom: 530px;
+    background: #273529;
+    position: relative;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 414px){
+  .preloader p{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    line-height: 30px;
+    font-size: 14px;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%)
   }
 }
 
