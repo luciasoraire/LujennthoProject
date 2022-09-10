@@ -107,7 +107,7 @@ function hacerCarrito(producto) {
   let tituloCarrito = document.querySelector("#tituloCarrito");
   tituloCarrito.textContent = `Productos seleccionados: ${listaCarrito.length}`;
   let comprar = document.querySelector("#comprar");
-  comprar.innerHTML = `<button>Comprar</button>`;
+  comprar.innerHTML = `<button class"botonComprarCarro">Comprar</button>`;
 }
 function actualizarArticleCarrito() {
   let articleCarrito = document.querySelector("#articleCarrito");
