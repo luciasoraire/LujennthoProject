@@ -340,6 +340,13 @@ text-align:justify;
   object-fit:cover;
 }
 
+.error404{
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
 
 .btnAzulOscuro {
   background-color: #394D3D;
