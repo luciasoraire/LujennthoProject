@@ -68,3 +68,48 @@ function filtrar(e) {
     resultado.innerHTML += `<li class="noEncontrado">Producto no encontrado</li>`;
   }
 }
+
+let listaCarrito = JSON.parse(localStorage.getItem("listaCarritoKey")) || [];
+cargaInicial();
+function guardarDatosCarritoEnLS() {
+  localStorage.setItem("listaCarritoKey", JSON.stringify(listaCarrito));
+}
+
+function añadir(codigoProducto) {
+  let productoBuscado = listaProductos.find(
+    (producto) => producto.codigo === codigoProducto
+  );
+  listaCarrito.push(productoBuscado);
+  guardarDatosCarritoEnLS();
+  actualizarArticleCarrito();
+}
+
+function cargaInicial() {
+  if (listaCarrito.length > 0) {
+    listaCarrito.map((producto) => hacerCarrito(producto));
+  }
+}
+
+function hacerCarrito(producto) {
+  let articleCarrito = document.querySelector("#articleCarrito");
+  articleCarrito.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3-carro">
+  <div class="text-center-carro">
+      <img src="${producto.imagen}" class="card-img-top-carro" alt="${producto.nombre}">
+      <div class="card-body text-centerCarro">
+        <h5 class="card-title-carro mb-3 shoppingCartItemTitle">${producto.nombre}</h5>
+        <h3 class="item-precio-carro shoppingCartItemPrice">$${producto.precio}</h3>
+        <div>
+        <button onclick="borrarProdCarrito('${producto.codigo}')">Borrar</button>
+        </div>
+      </div>
+    </div>
+</aside>`;
+  let tituloCarrito = document.querySelector("#tituloCarrito");
+  tituloCarrito.textContent = `Productos seleccionados: ${listaCarrito.length}`;
+  let comprar = document.querySelector("#comprar");
+  comprar.innerHTML = `<button>Comprar</button>`;
+}
+
+
+
+
