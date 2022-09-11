@@ -259,3 +259,17 @@ function hacerFilaUsuario(usuario) {
 function guardarDatosUsuarioEnLS() {
   localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
 }
+window.borrarUsuario = function (nombre) {
+  let copiaUsuario = listaUsuarios.filter(
+    (usuario) => usuario.nombre != nombre
+  );
+  listaUsuarios = copiaUsuario;
+  guardarDatosUsuarioEnLS();
+  actualizarTablaUsuario();
+};
+
+function actualizarTablaUsuario() {
+  let tablaUsuario = document.querySelector("#tablaUsuario");
+  tablaUsuario.innerHTML = "";
+  cargaUsuario();
+}
