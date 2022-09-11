@@ -12,6 +12,16 @@ let listaUsuarios = JSON.parse(localStorage.getItem("listaUsuariosKey")) || [];
 
 for (let i = 0; i < listaUsuarios.length; i++) {
   if (
+    listaUsuarios[i].nombre != "Administrador" ||
+    listaUsuarios[i].contrasenia != "Lujenntho1" ||
+    listaUsuarios[i].email != "administrador@lujenntho.com"
+  ) {
+    window.setTimeout(redirecicionar, 3000)
+  }
+}
+
+for (let i = 0; i < listaUsuarios.length; i++) {
+  if (
     listaUsuarios[i].nombre === "Administrador" &&
     listaUsuarios[i].contrasenia === "Lujenntho1" &&
     listaUsuarios[i].email === "administrador@lujenntho.com"
@@ -266,10 +276,16 @@ window.borrarUsuario = function (nombre) {
   listaUsuarios = copiaUsuario;
   guardarDatosUsuarioEnLS();
   actualizarTablaUsuario();
+  redirecicionar()
 };
 
 function actualizarTablaUsuario() {
   let tablaUsuario = document.querySelector("#tablaUsuario");
   tablaUsuario.innerHTML = "";
   cargaUsuario();
+}
+
+function redirecicionar() {
+  window.location.href =
+    window.location.origin + "/index.html";
 }
