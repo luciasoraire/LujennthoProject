@@ -60,6 +60,8 @@ function crearUsuario(e) {
       crearLinkAdmin();
       modalFormLogin.hide();
     } else {
+      let navLogin = document.querySelector("#navLogin");
+      navLogin.className = "ocultar";
       modalFormLogin.hide();
     }
   }
@@ -89,6 +91,17 @@ for (let i = 0; i < listaUsuarios.length; i++) {
     let navAdmin = document.querySelector("#navAdmin");
     let etiquetaAdmin = `<a href="pages/admin.html" class="nav-link">Administrador</a>`;
     navAdmin.innerHTML = etiquetaAdmin;
+    let navLogin = document.querySelector("#navLogin");
+    navLogin.className = "ocultar";
+  }
+}
+
+for (let i = 0; i < listaUsuarios.length; i++) {
+  if (
+    listaUsuarios[i].nombre != "Administrador" ||
+    listaUsuarios[i].contrasenia != "Lujenntho1" ||
+    listaUsuarios[i].email != "administrador@lujenntho.com"
+  ) {
     let navLogin = document.querySelector("#navLogin");
     navLogin.className = "ocultar";
   }
