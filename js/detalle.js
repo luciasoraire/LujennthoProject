@@ -79,7 +79,7 @@ detalle.innerHTML = `<div class=" mb-4 text-center">
     </div>
     <hr>
     <div>
-        <button>COMPRAR</button>
+        <a href="error404.html"><button>COMPRAR</button></a>
       </div>
   </div>
 </div>
