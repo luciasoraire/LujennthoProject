@@ -232,3 +232,30 @@ function actualizarProducto(){
     modalFormProducto.hide()
     limpiarFormulario()
 }
+
+cargaUsuario()
+
+function cargaUsuario() {
+  if (listaUsuarios.length > 0) {
+    listaUsuarios.map((usuario) => hacerFilaUsuario(usuario));
+  }
+}
+
+function hacerFilaUsuario(usuario) {
+  let tablaUsuario = document.querySelector("#tablaUsuario");
+  tablaUsuario.innerHTML += `<tr>
+    <th class="productosTabla" scope="row">${usuario.nombre}</th>
+    <td class="productosTabla">${usuario.email}</td>
+    <td class="productosTabla">
+        ${usuario.contrasenia}
+    </td>
+    <td class="productosTabla">
+      <button class="btn btn-outline-light" onclick="borrarUsuario('${usuario.nombre}')">
+        <i class="bi bi-trash"></i>
+      </button>
+    </td>
+  </tr>`;
+}
+function guardarDatosUsuarioEnLS() {
+  localStorage.setItem("listaUsuariosKey", JSON.stringify(listaUsuarios));
+}
