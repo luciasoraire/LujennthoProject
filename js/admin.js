@@ -183,9 +183,10 @@ window.borrarProducto = function (codigo) {
     title: "Eliminar producto",
     text: "Esta por eliminar el producto seleccionado. ¿Está seguro?",
     icon: "warning",
+    iconColor: "#cbb577",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
+    confirmButtonColor: "#cbb577",
+    cancelButtonColor: "#cbb577",
     confirmButtonText: "Borrar",
     cancelButtonText: "Cancelar",
   }).then((result) => {
