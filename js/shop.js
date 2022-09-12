@@ -44,29 +44,51 @@ let filtro = document.querySelector("#filtro");
 const resultado = document.querySelector("#resultado");
 formFiltro.addEventListener("submit", filtrar);
 
+filtro.addEventListener('blur',() => {
+  validarFiltro(filtro)
+} )
+
 function filtrar(e) {
   e.preventDefault();
   listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
   resultado.innerHTML = "";
-  let valorInput = filtro.value.toLowerCase();
-  for (let producto of listaProductos) {
-    let nombre = producto.nombre.toLowerCase();
-    if (nombre.indexOf(valorInput) !== -1) {
-      resultado.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3">
-      <div class="text-center">
-          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-          <div class="card-body text-center">
-            <h5 class="card-title mb-3">${producto.nombre}</h5>
-
-            <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+  if(validarFiltro(filtro)){
+    let valorInput = filtro.value.toLowerCase();
+    for (let producto of listaProductos) {
+      let nombre = producto.nombre.toLowerCase();
+      if (nombre.indexOf(valorInput) !== -1) {
+        resultado.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3">
+        <div class="text-center">
+            <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-3">${producto.nombre}</h5>
+  
+              <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+            </div>
           </div>
-        </div>
-  </aside>`;
+    </aside>`;
+      }
     }
+    if (resultado.innerHTML === "") {
+      resultado.innerHTML += `<li class="noEncontrado">Producto no encontrado</li>`;
+    }
+    limpiarFiltro()
   }
-  if (resultado.innerHTML === "") {
-    resultado.innerHTML += `<li class="noEncontrado">Producto no encontrado</li>`;
+}
+
+function validarFiltro(input) {
+  if (input.value.trim().length >= 1 && input.value.trim().length <= 30) {
+    input.className = "form-control is-valid";
+    return true;
+  } else {
+    input.className = "form-control is-invalid";
+    return false;
   }
+}
+
+function limpiarFiltro(){
+  formFiltro.reset()
+  filtro.className = "form-control"
 }
 
 let listaCarrito = JSON.parse(localStorage.getItem("listaCarritoKey")) || [];
