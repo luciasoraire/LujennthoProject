@@ -1,8 +1,8 @@
 import {
-  validarNombre,
+  validarNombreUsuario,
   validarContrasenia,
   validarEmail,
-} from "./classProducto.js";
+} from "./helpers.js";
 import { userAdmin, Usuario } from "./UserAdmin.js";
 
 const modalFormLogin = new bootstrap.Modal(
@@ -28,7 +28,7 @@ let contrasenia = document.querySelector("#contraseña");
 btnLogin.addEventListener("click", mostrarModal);
 formulario.addEventListener("submit", crearUsuario);
 nombre.addEventListener("blur", () => {
-  validarNombre(nombre);
+  validarNombreUsuario(nombre);
 });
 email.addEventListener("blur", () => {
   validarEmail(email);
@@ -40,7 +40,7 @@ contrasenia.addEventListener("blur", () => {
 function crearUsuario(e) {
   e.preventDefault();
   if (
-    validarNombre(nombre) &&
+    validarNombreUsuario(nombre) &&
     validarContrasenia(contrasenia) &&
     validarEmail(email)
   ) {
@@ -49,7 +49,6 @@ function crearUsuario(e) {
       email.value,
       contrasenia.value
     );
-    console.log(nuevoUsuario);
     listaUsuarios.push(nuevoUsuario);
     guardarDatosEnLS();
     if (

@@ -26,7 +26,6 @@
   </head>
   <body>
     <div class="loader">
-
       <div class="ring"></div>
     </div>
     <header>
@@ -91,15 +90,15 @@
           <table class="table">
             <thead class="thead">
               <tr>
-                <th class ="th" scope="col">Codigo</th>
-                <th class ="th" scope="col">Nombre</th>
-                <th class ="th" scope="col">Descripción</th>
-                <th class ="th" scope="col">Imagen</th>
-                <th class ="th" scope="col">Imagen secundaria</th>
-                <th class ="th" scope="col">Categoria</th>
-                <th class ="th" scope="col">Precio</th>
-                <th class ="th" scope="col">Stock</th>
-                <th class ="th" scope="col">Accion</th>
+                <th class="th" scope="col">Codigo</th>
+                <th class="th" scope="col">Nombre</th>
+                <th class="th" scope="col">Descripción</th>
+                <th class="th" scope="col">Imagen</th>
+                <th class="th" scope="col">Imagen secundaria</th>
+                <th class="th" scope="col">Categoria</th>
+                <th class="th" scope="col">Precio</th>
+                <th class="th" scope="col">Stock</th>
+                <th class="th" scope="col">Accion</th>
               </tr>
             </thead>
             <tbody id="tablaProducto" class="table-group-divider"></tbody>
@@ -113,17 +112,16 @@
           <table class="table">
             <thead class="thead">
               <tr>
-                <th class ="th" scope="col">Nombre</th>
-                <th class ="th" scope="col">Email</th>
-                <th class ="th" scope="col">Contraseña</th>
-                <th class ="th" scope="col">Accion</th>
+                <th class="th" scope="col">Nombre</th>
+                <th class="th" scope="col">Email</th>
+                <th class="th" scope="col">Contraseña</th>
+                <th class="th" scope="col">Accion</th>
               </tr>
             </thead>
             <tbody id="tablaUsuario" class="table-group-divider"></tbody>
           </table>
         </article>
       </section>
-
 
       <div
         class="modal fade"
@@ -226,8 +224,10 @@
                   />
                 </div>
                 <div class="enviarProducto">
-                <button type="submit" class="btn btn-light enviarProducto">Enviar</button>
-              </div>
+                  <button type="submit" class="btn btn-light enviarProducto">
+                    Enviar
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -243,26 +243,30 @@
           <a class="btn1" href="error404.html">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a class="btn1" href="https://github.com/TomasBudeguer/EcommerceGrupo2">
+          <a
+            class="btn1"
+            href="https://github.com/TomasBudeguer/EcommerceGrupo2"
+          >
             <i class="fa-brands fa-github"></i>
           </a>
         </div>
       </div>
-      
-        <p class="terminos">www.lujenntho.com <br />&copy;Todos los derechos reservados</p>
-     
+
+      <p class="terminos">
+        www.lujenntho.com <br />&copy;Todos los derechos reservados
+      </p>
     </footer>
     <script>
       const loader = document.querySelector(".loader");
-      window.onload = function(){
-        setTimeout(function(){
+      window.onload = function () {
+        setTimeout(function () {
           loader.style.opacity = "0";
-          setTimeout(function(){
+          setTimeout(function () {
             loader.style.display = "none";
           }, 450);
-        },900);
-      }
-   </script>
+        }, 900);
+      };
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
