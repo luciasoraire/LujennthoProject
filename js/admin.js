@@ -103,9 +103,7 @@ function generarProducto() {
     precio.value,
     stock.value
   );
-  console.log(nuevoProducto);
   listaProductos.push(nuevoProducto);
-  console.log(listaProductos);
   guardarDatosEnLS();
   limpiarFormulario();
   hacerFila(nuevoProducto);
