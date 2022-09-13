@@ -22,6 +22,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
 
+    <link
+      rel="shortcut icon"
+      href="../img/logoAuxiliarVerdeOscuro.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Lujennthó</title>
   </head>
@@ -86,7 +91,14 @@
                 <label for="filtro" class="form-label"
                   >Busque su producto</label
                 >
-                <input type="text" class="form-control" id="filtro" placeholder="Buzo, remera, malibu, etc..."/>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="filtro"
+                  placeholder="Buzo, remera, malibu, etc..."
+                  minlength="1"
+                  maxlength="30"
+                />
               </div>
               <button type="submit" id="btnFiltrar">Filtrar</button>
             </form>

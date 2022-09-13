@@ -51,7 +51,7 @@ export function validarPrecio(input) {
   }
 }
 export function validarStock(input) {
-  let expReg = /^[\d]{1,10}$/;
+  let expReg = /^[\d]{1,7}$/;
   if (expReg.test(input.value)) {
     input.className = "form-control is-valid";
     return true;
@@ -62,7 +62,7 @@ export function validarStock(input) {
 }
 
 export function validarNombreUsuario(input){
-  if (input.value.trim().length >=3 && input.value.trim().length <=50){
+  if (input.value.trim().length >=2 && input.value.trim().length <=40){
       input.className = 'form-control is-valid'
       return true
   } else {
