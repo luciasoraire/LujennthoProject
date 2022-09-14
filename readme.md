@@ -68,6 +68,16 @@
 1. Email: administrador@lujenntho.com
 1. Contraseña: Lujenntho1
 
+### Pruebe nuestra pagina
+*Les dejamos una serie de productos para que usted mismo agregue. (Recuerde loguearse como administrador)*
+1. Nombre: Buzo Bathgate
+1. Descripcion: Buzo gris reversible con puños verdes, sublogo verde enmarcado y centrado
+1. Imagen: https://i.ibb.co/DbKvqg7/buzo-Bathgate-Amarillo.png
+1. Imagen secundaria: https://i.ibb.co/fq89fSr/buzo-Hood-2.png
+1. Categoria: Buzo
+1. Precio: 11000
+1. Stock: 22
+
 <br>
 
 ### Autores
