@@ -63,6 +63,11 @@ function crearUsuario(e) {
       navLogin.className = "ocultar";
       modalFormLogin.hide();
     }
+    Swal.fire(
+      `Bienvenido ${nuevoUsuario.nombre}`,
+      'Gracias por registrarte!',
+      'success'
+    )
   }
 }
 
