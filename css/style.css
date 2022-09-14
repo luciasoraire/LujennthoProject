@@ -348,15 +348,6 @@ button.btn.btn-warning {
   background-position: center;
 }
 
-.btnAzulOscuro {
-  background-color: #394d3d;
-  color: white;
-}
-.btnAzulOscuro:hover {
-  background-color: #697e6f;
-  color: white;
-}
-
 h2.text-center.mt-2 {
   padding: 20px;
   font-size: 40px;
@@ -654,12 +645,6 @@ div.card-body.text-centerCarro {
   font-size: 20px;
 }
 
-li.noEncontrado {
-  list-style-type: none;
-  text-align: center;
-  margin-top: 10px;
-}
-
 aside.col-sm-12.col-md-4.col-lg-3-carro {
   padding-bottom: 30px;
 }
@@ -712,7 +697,7 @@ button.btn.btn-danger.buttonDelete {
 }
 
 h3.Carrito {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 #tituloCarrito {
   font-size: 15px;

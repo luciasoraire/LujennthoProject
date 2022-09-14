@@ -21,14 +21,14 @@ listaProductos.map((producto) => {
 
 function hacerGrilla(producto) {
   let grilla = document.querySelector("#grilla");
-  grilla.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3">
+  grilla.innerHTML += `<aside class="col-sm-12 col-md-4 col-lg-3 mb-4">
     <div class="text-center">
         <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
         <div class="card-body text-center">
-          <h5 class="card-title mb-3">${producto.nombre}</h5>
+          <h5 class="card-title my-2">${producto.nombre}</h5>
           <h3 class="item-precio">$${producto.precio}</h3>
-          <button onclick="detalleProducto('${producto.codigo}')">Detalle</button>
-          <button onclick="añadir('${producto.codigo}')">Añadir al carrito</button>
+          <button class="mb-2" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+          <button class="mb-2" onclick="añadir('${producto.codigo}')">Añadir al carrito</button>
         </div>
       </div>
 </aside>`;
@@ -63,14 +63,14 @@ function filtrar(e) {
             <div class="card-body text-center">
               <h5 class="card-title mb-3">${producto.nombre}</h5>
   
-              <button class="btn btnAzulOscuro" onclick="detalleProducto('${producto.codigo}')">Detalle</button>
+              <button onclick="detalleProducto('${producto.codigo}')">Detalle</button>
             </div>
           </div>
     </aside>`;
       }
     }
     if (resultado.innerHTML === "") {
-      resultado.innerHTML += `<li class="noEncontrado">Producto no encontrado</li>`;
+      resultado.innerHTML += `<h5 class="text-center my-2">Producto no encontrado</h5>`;
     }
     limpiarFiltro()
   }
