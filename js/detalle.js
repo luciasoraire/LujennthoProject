@@ -62,7 +62,7 @@ detalle.innerHTML = `<div class=" mb-4 text-center">
       <hr>
       <div>
 <h5>Precio: <span class="badge rounded-pill genero text-light"
->${productoBuscado.precio}</span
+>$ ${productoBuscado.precio}</span
 ></h5>
 <h5>Stock: <span class="badge rounded-pill genero text-light"
 >${productoBuscado.stock}</span
