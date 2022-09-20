@@ -68,6 +68,8 @@
 1. Email: administrador@lujenntho.com
 1. Contraseña: Lujenntho1
 
+<br>
+
 ### Pruebe nuestra pagina
 *Les dejamos una serie de productos para que usted mismo agregue. (Recuerde loguearse como administrador)*
 1. Nombre: Buzo Bathgate
